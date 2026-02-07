@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-02-06T00:00:00.000Z",
+  "pendingCount": 3,
+  "applications": [
+    {
+      "_id": "doc-app-2001",
+      "firstName": "Harper",
+      "lastName": "Ng",
+      "fullName": "Dr. Harper Ng",
+      "specialty": "Pediatrician",
+      "applicationStatus": "pending",
+      "submittedAt": "2026-01-28T10:15:00.000Z",
+      "credentials": ["MD - University of Toronto","Pediatrics Residency - SickKids"],
+      "documents": ["license.pdf","cv.pdf","certificate.pdf"],
+      "notes": "Seeking primary clinic affiliation; telehealth approved pending verification."
+    },
+    {
+      "_id": "doc-app-2002",
+      "firstName": "Mateo",
+      "lastName": "Rossi",
+      "fullName": "Dr. Mateo Rossi",
+      "specialty": "Endocrinologist",
+      "applicationStatus": "pending",
+      "submittedAt": "2026-02-01T14:40:00.000Z",
+      "credentials": ["MD - Sapienza University","Endocrinology Fellowship - Mount Sinai"],
+      "documents": ["license.pdf","cv.pdf"],
+      "notes": "References pending; international license verification in progress."
+    },
+    {
+      "_id": "doc-app-2003",
+      "firstName": "Zoe",
+      "lastName": "Park",
+      "fullName": "Dr. Zoe Park",
+      "specialty": "Psychiatrist",
+      "applicationStatus": "pending",
+      "submittedAt": "2026-02-03T09:05:00.000Z",
+      "credentials": ["MD - Seoul National University","Psychiatry Residency - UCLA"],
+      "documents": ["license.pdf","cv.pdf","passport-id.pdf"],
+      "notes": "Telehealth-only provider; waiting on malpractice insurance confirmation."
+    }
+  ]
+}

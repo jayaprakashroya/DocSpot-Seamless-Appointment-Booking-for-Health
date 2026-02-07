@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-02-06T00:00:00.000Z",
+  "totalAppointments": 12,
+  "byStatus": {
+    "pending": 3,
+    "confirmed": 5,
+    "completed": 2,
+    "cancelled": 1,
+    "no_show": 1
+  },
+  "examples": [
+    {
+      "_id": "appt-1001",
+      "patientName": "Olivia Martinez",
+      "doctorName": "Dr. Liam Murphy",
+      "dateTime": "2026-02-10T10:30:00.000Z",
+      "status": "pending",
+      "paymentStatus": "unpaid"
+    },
+    {
+      "_id": "appt-1002",
+      "patientName": "Samuel Lee",
+      "doctorName": "Dr. Aisha Khan",
+      "dateTime": "2026-02-12T09:00:00.000Z",
+      "status": "confirmed",
+      "paymentStatus": "paid"
+    },
+    {
+      "_id": "appt-1003",
+      "patientName": "Noah Brown",
+      "doctorName": "Dr. Sofia Garcia",
+      "dateTime": "2026-02-11T13:00:00.000Z",
+      "status": "confirmed",
+      "paymentStatus": "paid"
+    },
+    {
+      "_id": "appt-1004",
+      "patientName": "Isabella Garcia",
+      "doctorName": "Dr. Ethan Nguyen",
+      "dateTime": "2026-02-13T11:30:00.000Z",
+      "status": "cancelled",
+      "paymentStatus": "refunded"
+    },
+    {
+      "_id": "appt-1005",
+      "patientName": "Ava Wilson",
+      "doctorName": "Dr. Victoria Lee",
+      "dateTime": "2026-02-05T14:00:00.000Z",
+      "status": "completed",
+      "paymentStatus": "paid"
+    },
+    {
+      "_id": "appt-1006",
+      "patientName": "Liam Scott",
+      "doctorName": "Dr. Robert Chen",
+      "dateTime": "2026-02-02T09:00:00.000Z",
+      "status": "no_show",
+      "paymentStatus": "unpaid"
+    }
+  ]
+}
