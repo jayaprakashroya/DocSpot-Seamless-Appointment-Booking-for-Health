@@ -14,6 +14,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
+// Connect to MongoDB with retry logic
 connectDB();
 
 // Routes
@@ -22,8 +23,28 @@ app.use('/api/doctors', require('./routes/doctorRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));
 app.use('/api/appointments', require('./routes/appointmentRoutes'));
 
-// Health check
-app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
+// Health check endpoints
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime()
+  });
+});
+
+app.get('/api/health/detailed', async (req, res) => {
+  const mongoose = require('mongoose');
+  res.json({
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+    database: {
+      connected: mongoose.connection.readyState === 1,
+      host: mongoose.connection.host || 'Not connected',
+      state: ['disconnected', 'connected', 'connecting', 'disconnecting'][mongoose.connection.readyState]
+    }
+  });
+});
 
 // Centralized error handling (must be last)
 app.use(errorHandler);
@@ -61,4 +82,37 @@ io.on('connection', (socket) => {
 
 socketService.setIO(io);
 
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Graceful shutdown
+process.on('SIGTERM', () => {
+  console.log('⚠️  SIGTERM signal received. Starting graceful shutdown...');
+  server.close(() => {
+    console.log('✅ HTTP server closed');
+    process.exit(0);
+  });
+});
+
+process.on('SIGINT', () => {
+  console.log('⚠️  SIGINT signal received. Starting graceful shutdown...');
+  server.close(() => {
+    console.log('✅ HTTP server closed');
+    process.exit(0);
+  });
+});
+
+// Uncaught exception handler
+process.on('uncaughtException', (error) => {
+  console.error('❌ Uncaught Exception:', error);
+  process.exit(1);
+});
+
+// Unhandled rejection handler
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('❌ Unhandled Rejection at:', promise, 'reason:', reason);
+});
+
+// Start server
+server.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`📍 API: http://localhost:${PORT}/api`);
+  console.log(`🏥 Health Check: http://localhost:${PORT}/api/health`);
+});

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AdminDashboard from './components/admin/AdminDashboard';
 import Home from './components/common/Home';
@@ -11,8 +12,35 @@ import BookForm from './components/user/BookForm';
 import DoctorList from './components/user/DoctorList';
 import UserDashboard from './components/user/UserDashboard';
 import UserProfile from './components/user/UserProfile';
+import api from './utils/axiosConfig';
 
 export default function AppRouter() {
+  useEffect(() => {
+    // Validate token on app load
+    const validateToken = async () => {
+      const token = localStorage.getItem('token');
+      if (token) {
+        try {
+          // Quick validation by calling a protected endpoint
+          await api.get('/users/profile');
+          console.log('✅ Token is valid, user authenticated');
+        } catch (err) {
+          if (err?.response?.status === 401) {
+            console.warn('⚠️ Token expired or invalid, logging out');
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            try {
+              window.dispatchEvent(new Event('authChanged'));
+            } catch (e) {}
+            // The user will be redirected by ProtectedRoute
+          }
+        }
+      }
+    };
+
+    validateToken();
+  }, []);
+
   return (
     <BrowserRouter>
       <NavBar />

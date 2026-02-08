@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { FaCalendarAlt, FaChartBar, FaCheckCircle, FaClipboardList, FaClock, FaHome, FaSignOutAlt, FaUser, FaUsers } from 'react-icons/fa';
+import { FaCalendarAlt, FaChartBar, FaCheckCircle, FaClipboardList, FaClock, FaHome, FaSignOutAlt, FaSync, FaUser, FaUsers } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import api from '../../utils/axiosConfig';
+import { initSocket } from '../../utils/socket';
 import './NavBar.css';
 
 const NavBar = () => {
@@ -13,6 +14,11 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isInfoOpen, setIsInfoOpen] = useState(false);
+  // Real-time data for doctors
+  const [appointments, setAppointments] = useState({ pending: 0, scheduled: 0, completed: 0 });
+  const [availableSlots, setAvailableSlots] = useState({});
+  const [lastUpdated, setLastUpdated] = useState(null);
+  const [isRefreshing, setIsRefreshing] = useState(false);
 
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
@@ -42,19 +48,120 @@ const NavBar = () => {
   useEffect(() => {
     if (user?.type === 'doctor') {
       loadDoctorInfo();
+      loadAppointmentStats();
+      loadAvailabilityData();
+      
+      // Set up interval to refresh data every 30 seconds
+      const interval = setInterval(() => {
+        loadAppointmentStats();
+        loadAvailabilityData();
+      }, 30000); // 30 seconds
+      
+      // Set up socket listeners for real-time updates
+      try {
+        const sock = initSocket(user._id);
+        sock.on('appointmentUpdated', () => {
+          console.log('Real-time: Appointment updated');
+          loadAppointmentStats();
+        });
+        sock.on('appointmentCreated', () => {
+          console.log('Real-time: Appointment created');
+          loadAppointmentStats();
+        });
+        sock.on('availabilityUpdated', () => {
+          console.log('Real-time: Availability updated');
+          loadAvailabilityData();
+        });
+      } catch (err) {
+        console.error('Socket connection error:', err);
+      }
+      
+      return () => {
+        clearInterval(interval);
+      };
     }
   }, [user]);
 
-  const loadDoctorInfo = async () => {
+  const loadDoctorInfo = async (retries = 3) => {
     try {
       setDoctorLoading(true);
       const res = await api.get('/doctors/profile');
       setDoctor(res.data.doctor || res.data);
     } catch (err) {
-      console.error('Failed to load doctor profile', err);
-      setDoctor(null);
+      console.error('Failed to load doctor profile', err?.response?.status, err?.response?.data);
+      if (err?.response?.status === 401) {
+        // Token invalid, auto logout will be handled by axiosConfig
+        return;
+      }
+      if (retries > 0 && err?.response?.status >= 500) {
+        // Retry on server error after 2 seconds
+        setTimeout(() => loadDoctorInfo(retries - 1), 2000);
+      } else {
+        setDoctor(null);
+      }
     } finally {
       setDoctorLoading(false);
+    }
+  };
+
+  const loadAppointmentStats = async (retries = 3) => {
+    try {
+      const res = await api.get('/appointments/doctor');
+      const allAppointments = res.data.appointments || [];
+      
+      const stats = {
+        pending: allAppointments.filter(a => a.status === 'pending').length,
+        scheduled: allAppointments.filter(a => a.status === 'scheduled').length,
+        completed: allAppointments.filter(a => a.status === 'completed').length,
+      };
+      
+      setAppointments(stats);
+      setLastUpdated(new Date());
+    } catch (err) {
+      console.error('Failed to load appointment stats', err?.response?.status, err?.response?.data);
+      if (err?.response?.status === 401) {
+        // Token invalid
+        return;
+      }
+      if (retries > 0 && err?.response?.status >= 500) {
+        // Retry on server error
+        setTimeout(() => loadAppointmentStats(retries - 1), 2000);
+      }
+    }
+  };
+
+  const loadAvailabilityData = async (retries = 3) => {
+    try {
+      const res = await api.get('/doctors/profile');
+      const doctorData = res.data.doctor || res.data;
+      if (doctorData.availability) {
+        setAvailableSlots(doctorData.availability);
+      }
+    } catch (err) {
+      console.error('Failed to load availability data', err?.response?.status, err?.response?.data);
+      if (err?.response?.status === 401) {
+        // Token invalid
+        return;
+      }
+      if (retries > 0 && err?.response?.status >= 500) {
+        // Retry on server error
+        setTimeout(() => loadAvailabilityData(retries - 1), 2000);
+      }
+    }
+  };
+
+  const handleRefreshData = async () => {
+    setIsRefreshing(true);
+    try {
+      await Promise.all([
+        loadDoctorInfo(2),
+        loadAppointmentStats(2),
+        loadAvailabilityData(2)
+      ]);
+    } catch (err) {
+      console.error('Refresh failed:', err);
+    } finally {
+      setIsRefreshing(false);
     }
   };
 
@@ -152,6 +259,11 @@ const NavBar = () => {
                       title="View your info and availability"
                     >
                       <FaUser /> {doctor?.fullname || 'Doctor'}
+                      {(appointments.pending > 0 || appointments.scheduled > 0) && (
+                        <span className="badge-count">
+                          {appointments.pending + appointments.scheduled}
+                        </span>
+                      )}
                     </button>
                     {isInfoOpen && (
                       <div className="info-dropdown-menu">
@@ -164,10 +276,37 @@ const NavBar = () => {
                             <div className="dropdown-header">
                               <h4>{doctor.fullname || 'Doctor'}</h4>
                               <p className="specialty">{doctor.specialty || doctor.specialization || 'Specialist'}</p>
+                              <button 
+                                className="btn-refresh-mini"
+                                onClick={handleRefreshData}
+                                disabled={isRefreshing}
+                                title="Refresh data"
+                              >
+                                <FaSync className={isRefreshing ? 'spinning' : ''} />
+                              </button>
+                            </div>
+
+                            {/* Real-time Appointments Stats */}
+                            <div className="dropdown-section appointments-stats">
+                              <p className="section-title">📅 Appointments</p>
+                              <div className="stats-grid">
+                                <div className="stat-item pending">
+                                  <span className="stat-number">{appointments.pending}</span>
+                                  <span className="stat-label">Pending</span>
+                                </div>
+                                <div className="stat-item scheduled">
+                                  <span className="stat-number">{appointments.scheduled}</span>
+                                  <span className="stat-label">Scheduled</span>
+                                </div>
+                                <div className="stat-item completed">
+                                  <span className="stat-number">{appointments.completed}</span>
+                                  <span className="stat-label">Completed</span>
+                                </div>
+                              </div>
                             </div>
 
                             <div className="dropdown-section">
-                              <p className="section-title">📋 Quick Info</p>
+                              <p className="section-title">📋 Profile Info</p>
                               <div className="info-item">
                                 <span>Experience:</span>
                                 <strong>{doctor.yearsExperience || doctor.experience || 'N/A'} years</strong>
@@ -182,16 +321,18 @@ const NavBar = () => {
                               </div>
                             </div>
 
-                            {doctor.availability && Object.keys(doctor.availability).length > 0 && (
+                            {/* Real-time Availability */}
+                            {availableSlots && Object.keys(availableSlots).length > 0 && (
                               <div className="dropdown-section">
-                                <p className="section-title">🕐 This Week's Availability</p>
+                                <p className="section-title">🕐 Your Availability</p>
                                 <div className="availability-mini">
-                                  {Object.entries(doctor.availability).map(([day, times]) => {
-                                    if (!Array.isArray(times) || times.length === 0) return null;
+                                  {Object.entries(availableSlots).slice(0, 6).map(([day, times]) => {
+                                    const slotCount = Array.isArray(times) ? times.length : 0;
+                                    if (slotCount === 0) return null;
                                     return (
                                       <div key={day} className="mini-day">
                                         <span className="day-name">{day.slice(0, 3).toUpperCase()}</span>
-                                        <span className="time-count">{times.length} slots</span>
+                                        <span className="time-count">{slotCount} slots</span>
                                       </div>
                                     );
                                   })}
@@ -199,12 +340,24 @@ const NavBar = () => {
                               </div>
                             )}
 
+                            {/* Last Updated */}
+                            {lastUpdated && (
+                              <div className="dropdown-section last-updated">
+                                <p className="update-time">
+                                  🔄 Updated {lastUpdated.toLocaleTimeString()}
+                                </p>
+                              </div>
+                            )}
+
                             <div className="dropdown-actions">
-                              <Link to="/doctor/profile" className="dropdown-link" onClick={() => setIsInfoOpen(false)}>
-                                View Full Profile
+                              <Link to="/doctor/appointments" className="dropdown-link" onClick={() => setIsInfoOpen(false)}>
+                                View All Appointments
                               </Link>
                               <Link to="/doctor/availability" className="dropdown-link" onClick={() => setIsInfoOpen(false)}>
                                 Manage Availability
+                              </Link>
+                              <Link to="/doctor/profile" className="dropdown-link" onClick={() => setIsInfoOpen(false)}>
+                                View Full Profile
                               </Link>
                             </div>
                           </>

@@ -1,17 +1,27 @@
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import api from '../../utils/axiosConfig';
 import './Login.css';
 
 const Login = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
   const [loginType, setLoginType] = useState('user'); // 'user', 'doctor', 'admin'
+  const [sessionExpired, setSessionExpired] = useState(false);
+
+  useEffect(() => {
+    // Show session expired message if redirected back to login
+    if (searchParams.get('session_expired') === 'true') {
+      setSessionExpired(true);
+      toast.warning('Your session has expired. Please login again.');
+    }
+  }, [searchParams]);
 
   const validateForm = () => {
     const newErrors = {};
@@ -37,15 +47,38 @@ const Login = () => {
       // Notify other components (navbar, etc.) that auth changed
       try { window.dispatchEvent(new Event('authChanged')); } catch (e) { /* ignore */ }
       toast.success('Login successful!');
+      setSessionExpired(false);
       setTimeout(() => {
         if (user.type === 'admin') navigate('/admin');
         else if (user.isDoctor || user.type === 'doctor') navigate('/doctor');
         else navigate('/user');
       }, 500);
     } catch (err) {
-      const message = err?.response?.data?.message || err.message || 'Login failed. Please try again.';
+      let message = 'Login failed. Please try again.';
+      
+      // Check if server is unreachable
+      if (!err.response) {
+        if (err.message === 'Network Error') {
+          message = '❌ Cannot reach server. Is the backend running on port 5000? Start it in terminal.';
+        } else if (err.code === 'ECONNREFUSED') {
+          message = '❌ Backend server is not running. Start it with: npm start (in backend folder)';
+        } else {
+          message = `❌ Network error: ${err.message}`;
+        }
+      } else if (err.response?.status === 400 || err.response?.status === 401) {
+        // Invalid credentials
+        message = err?.response?.data?.message || 'Invalid email or password';
+      } else if (err.response?.status === 500) {
+        message = '❌ Server error. Check if backend is properly connected to MongoDB.';
+      } else if (err.response?.status === 503) {
+        message = '❌ Database unavailable. Is MongoDB running?';
+      } else {
+        message = err?.response?.data?.message || 'Login failed. Please try again.';
+      }
+      
       toast.error(message);
       setErrors({ submit: message });
+      console.error('Login error:', err);
     } finally {
       setLoading(false);
     }

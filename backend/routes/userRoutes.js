@@ -23,8 +23,25 @@ router.post('/register', async (req, res) => {
     const hashed = await bcrypt.hash(password, salt);
     user = new User({ name, email, password: hashed, phone, type: 'customer' });
     await user.save();
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET || 'change_this_secret');
-    res.json({ token, user: { id: user._id, name: user.name, email: user.email, type: user.type, isDoctor: user.isDoctor } });
+    
+    // Generate token with 7-day expiration
+    const token = jwt.sign(
+      { id: user._id }, 
+      process.env.JWT_SECRET || 'change_this_secret',
+      { expiresIn: '7d' }
+    );
+    
+    res.json({ 
+      token, 
+      user: { 
+        _id: user._id,
+        id: user._id, 
+        name: user.name, 
+        email: user.email, 
+        type: user.type, 
+        isDoctor: user.isDoctor 
+      } 
+    });
   } catch (err) {
     console.error('Register error:', err);
     res.status(500).json({ message: 'Server error' });
@@ -39,8 +56,25 @@ router.post('/login', async (req, res) => {
     if (!user) return res.status(400).json({ message: 'Invalid credentials' });
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).json({ message: 'Invalid credentials' });
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET || 'change_this_secret');
-    res.json({ token, user: { id: user._id, name: user.name, email: user.email, type: user.type, isDoctor: user.isDoctor } });
+    
+    // Generate token with 7-day expiration
+    const token = jwt.sign(
+      { id: user._id }, 
+      process.env.JWT_SECRET || 'change_this_secret',
+      { expiresIn: '7d' }
+    );
+    
+    res.json({ 
+      token, 
+      user: { 
+        _id: user._id,
+        id: user._id, 
+        name: user.name, 
+        email: user.email, 
+        type: user.type, 
+        isDoctor: user.isDoctor 
+      } 
+    });
   } catch (err) {
     res.status(500).json({ message: 'Server error' });
   }

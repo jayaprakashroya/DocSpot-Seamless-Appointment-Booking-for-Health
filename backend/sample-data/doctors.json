@@ -22,7 +22,7 @@
       "wednesday": ["09:00","11:00","13:00","15:00"],
       "friday": ["10:00","12:00","15:00"]
     },
-    "initialPassword": "Doctor@123"
+    "initialPassword": "cqp10k7eyun"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b002",
@@ -43,7 +43,7 @@
     "certifications": ["PALS","BLS"],
     "contact": { "phone": "+1-214-555-0167", "email": "liam.murphy@docspot.com" },
     "availability": { "tuesday": ["08:30","10:00","11:30","14:00"], "thursday": ["09:00","11:00","13:30"] },
-    "initialPassword": "Doctor@123"
+    "initialPassword": "awoawmnrqcm"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b003",
@@ -64,7 +64,7 @@
     "certifications": ["Dermatology Board Certified"],
     "contact": { "phone": "+1-210-555-0199", "email": "sofia.garcia@docspot.com" },
     "availability": { "monday": ["10:00","13:00"], "tuesday": ["09:00","12:00","15:00"], "friday": ["09:30","11:00"] },
-    "initialPassword": "Doctor@123"
+    "initialPassword": "kvdheoyeg4"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b004",
@@ -85,7 +85,7 @@
     "certifications": ["Board Certified Orthopedics"],
     "contact": { "phone": "+1-713-555-0144", "email": "ethan.nguyen@docspot.com" },
     "availability": { "wednesday": ["08:30","10:30","14:00"], "thursday": ["09:00","12:00"] },
-    "initialPassword": "Doctor@123"
+    "initialPassword": "89l0kb4tvrf"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b005",
@@ -106,7 +106,7 @@
     "certifications": ["ACLS", "BLS"],
     "contact": { "phone": "+1-972-555-0188", "email": "maya.patel@docspot.com" },
     "availability": { "monday": ["09:00","11:00","16:00"], "thursday": ["10:00","13:00"] },
-    "initialPassword": "Doctor@123"
+    "initialPassword": "jbolbwsj0f"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b006",
@@ -127,7 +127,7 @@
     "certifications": ["Board Certified Internal Medicine", "ABIM"],
     "contact": { "phone": "+1-512-555-0145", "email": "robert.chen@docspot.com" },
     "availability": { "tuesday": ["09:00","11:30","14:00"], "friday": ["10:00","13:00","15:30"] },
-    "initialPassword": "Doctor@123"
+    "initialPassword": "g7j4pqsx5j"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b007",
@@ -148,7 +148,7 @@
     "certifications": ["Board Certified Geriatric Medicine"],
     "contact": { "phone": "+1-214-555-0178", "email": "eleanor.williams@docspot.com" },
     "availability": { "monday": ["08:30","11:00"], "wednesday": ["09:00","12:00","14:00"], "friday": ["09:30","12:30"] },
-    "initialPassword": "Doctor@123"
+    "initialPassword": "27znbdmi9ia"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b008",
@@ -169,7 +169,7 @@
     "certifications": ["Board Certified Endocrinology", "Diabetes Specialist"],
     "contact": { "phone": "+1-713-555-0167", "email": "james.anderson@docspot.com" },
     "availability": { "tuesday": ["09:00","12:00","14:30"], "thursday": ["10:00","13:00"] },
-    "initialPassword": "Doctor@123"
+    "initialPassword": "78izvsmiqwv"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b009",
@@ -190,7 +190,7 @@
     "certifications": ["Board Certified Gastroenterology", "ERCP Certified"],
     "contact": { "phone": "+1-210-555-0189", "email": "patricia.martinez@docspot.com" },
     "availability": { "monday": ["09:30","12:30"], "wednesday": ["10:00","13:30","15:00"] },
-    "initialPassword": "Doctor@123"
+    "initialPassword": "qwjt269nlx"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b010",
@@ -210,7 +210,8 @@
     "education": ["MD - Yale University","Neurology Residency - Johns Hopkins"],
     "certifications": ["Board Certified Neurology", "Stroke Specialist"],
     "contact": { "phone": "+1-512-555-0134", "email": "michael.thompson@docspot.com" },
-    "availability": { "tuesday": ["09:00","11:30","14:00"], "thursday": ["10:00","12:30","15:00"] }
+    "availability": { "tuesday": ["09:00","11:30","14:00"], "thursday": ["10:00","12:30","15:00"] },
+    "initialPassword": "92era5wvkpd"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b011",
@@ -230,7 +231,8 @@
     "education": ["MD - Washington University","Ophthalmology Residency - Wills Eye Hospital"],
     "certifications": ["Board Certified Ophthalmology", "LASIK Surgeon"],
     "contact": { "phone": "+1-214-555-0145", "email": "victoria.lee@docspot.com" },
-    "availability": { "monday": ["09:00","11:30"], "wednesday": ["10:00","12:30","14:30"], "friday": ["09:30","12:00"] }
+    "availability": { "monday": ["09:00","11:30"], "wednesday": ["10:00","12:30","14:30"], "friday": ["09:30","12:00"] },
+    "initialPassword": "s4no9ugvyo"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b012",
@@ -250,7 +252,8 @@
     "education": ["MD - Northwestern University","ENT Residency - Mass Eye and Ear"],
     "certifications": ["Board Certified Otolaryngology"],
     "contact": { "phone": "+1-713-555-0123", "email": "david.johnson@docspot.com" },
-    "availability": { "tuesday": ["09:00","11:30"], "thursday": ["10:00","13:00","15:00"] }
+    "availability": { "tuesday": ["09:00","11:30"], "thursday": ["10:00","13:00","15:00"] },
+    "initialPassword": "6gekfwncnr"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b013",
@@ -270,7 +273,8 @@
     "education": ["MD - University of California","Pulmonology Fellowship - Stanford"],
     "certifications": ["Board Certified Pulmonology", "Sleep Medicine Specialist"],
     "contact": { "phone": "+1-210-555-0156", "email": "susan.davis@docspot.com" },
-    "availability": { "monday": ["09:00","12:00"], "wednesday": ["10:00","13:00","15:00"] }
+    "availability": { "monday": ["09:00","12:00"], "wednesday": ["10:00","13:00","15:00"] },
+    "initialPassword": "napk0l31n4t"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b014",
@@ -290,7 +294,8 @@
     "education": ["MD - UCLA","Urology Residency - University of Michigan"],
     "certifications": ["Board Certified Urology", "Minimally Invasive Surgery"],
     "contact": { "phone": "+1-512-555-0167", "email": "christopher.brown@docspot.com" },
-    "availability": { "tuesday": ["09:00","12:00"], "thursday": ["10:00","13:00","15:00"] }
+    "availability": { "tuesday": ["09:00","12:00"], "thursday": ["10:00","13:00","15:00"] },
+    "initialPassword": "7rk76wtzewm"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b015",
@@ -310,7 +315,8 @@
     "education": ["MD - University of Chicago","General Surgery Residency - Mayo Clinic"],
     "certifications": ["Board Certified General Surgery", "ACLS"],
     "contact": { "phone": "+1-214-555-0189", "email": "jennifer.wilson@docspot.com" },
-    "availability": { "monday": ["09:00","11:00"], "wednesday": ["10:00","12:00","14:00"], "friday": ["09:30","11:30"] }
+    "availability": { "monday": ["09:00","11:00"], "wednesday": ["10:00","12:00","14:00"], "friday": ["09:30","11:30"] },
+    "initialPassword": "etm3zumw5s8"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b016",
@@ -330,7 +336,8 @@
     "education": ["MD - Harvard Medical School","Neurosurgery Fellowship - Stanford"],
     "certifications": ["Board Certified Neurosurgery", "Spine Surgery Specialist"],
     "contact": { "phone": "+1-713-555-0134", "email": "richard.taylor@docspot.com" },
-    "availability": { "tuesday": ["08:30","10:30"], "thursday": ["09:00","11:00","14:00"] }
+    "availability": { "tuesday": ["08:30","10:30"], "thursday": ["09:00","11:00","14:00"] },
+    "initialPassword": "3vudo22kc88"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b017",
@@ -351,7 +358,7 @@
     "certifications": ["Board Certified Anesthesiology", "ACLS"],
     "contact": { "phone": "+1-210-555-0167", "email": "angela.martinez@docspot.com" },
     "availability": { "monday": ["09:00","12:00"], "wednesday": ["10:00","13:00"], "friday": ["09:30","12:30"] },
-    "initialPassword": "Doctor@123"
+    "initialPassword": "btrrsj70vgm"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b018",
@@ -372,7 +379,7 @@
     "certifications": ["Board Certified Medical Oncology", "Chemotherapy Specialist"],
     "contact": { "phone": "+1-512-555-0178", "email": "thomas.harris@docspot.com" },
     "availability": { "tuesday": ["09:00","11:30"], "thursday": ["10:00","13:00"], "friday": ["09:30","12:00"] },
-    "initialPassword": "Doctor@123"
+    "initialPassword": "o597sln0u4q"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b019",
@@ -393,7 +400,7 @@
     "certifications": ["Board Certified Orthodontist"],
     "contact": { "phone": "+1-214-555-0134", "email": "lisa.garcia@docspot.com" },
     "availability": { "monday": ["10:00","13:00"], "wednesday": ["09:30","12:00","14:30"], "friday": ["10:00","13:00"] },
-    "initialPassword": "Doctor@123"
+    "initialPassword": "q6bgo1mnzoa"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b020",
@@ -414,7 +421,7 @@
     "certifications": ["Board Certified Endodontist", "RCT Specialist"],
     "contact": { "phone": "+1-713-555-0145", "email": "mark.kelly@docspot.com" },
     "availability": { "tuesday": ["09:00","12:00","14:00"], "thursday": ["10:00","13:00"] },
-    "initialPassword": "Doctor@123"
+    "initialPassword": "3cddyevwwf6"
   },
   {
     "_id": "64a1f3b2e4a1c6d7f0a1b021",
@@ -435,7 +442,7 @@
     "certifications": ["Board Certified Oral Surgeon", "Implant Specialist"],
     "contact": { "phone": "+1-210-555-0178", "email": "rachel.adams@docspot.com" },
     "availability": { "monday": ["09:00","11:30"], "wednesday": ["10:00","12:30","14:30"], "friday": ["09:30","12:00"] },
-    "initialPassword": "Doctor@123"
+    "initialPassword": "f4j1b3fg8a"
   }
 ,
   {

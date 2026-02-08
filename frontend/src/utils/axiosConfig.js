@@ -16,4 +16,24 @@ instance.interceptors.request.use((config) => {
   return config;
 });
 
+// Handle response errors - auto logout on 401
+instance.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response?.status === 401) {
+      // Token expired or invalid - clear storage and redirect to login
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      try {
+        window.dispatchEvent(new Event('authChanged'));
+      } catch (e) {}
+      // Optional: Show user they need to login again
+      if (window.location.pathname !== '/login') {
+        window.location.href = '/login?session_expired=true';
+      }
+    }
+    return Promise.reject(error);
+  }
+);
+
 export default instance;
