@@ -17,6 +17,23 @@ app.use('/uploads', express.static('uploads'));
 // Connect to MongoDB with retry logic
 connectDB();
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'DocSpot Seamless Appointment Booking API',
+    version: '1.0.0',
+    status: 'running',
+    endpoints: {
+      health: '/api/health',
+      health_detailed: '/api/health/detailed',
+      users: '/api/users',
+      doctors: '/api/doctors',
+      admin: '/api/admin',
+      appointments: '/api/appointments'
+    }
+  });
+});
+
 // Routes
 app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/doctors', require('./routes/doctorRoutes'));
