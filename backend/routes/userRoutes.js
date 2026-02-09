@@ -53,31 +53,30 @@ router.post('/login', async (req, res) => {
   try {
     const { email, password, type } = req.body;
     
-    if (!type) {
-      return res.status(400).json({ message: 'Login type (user, doctor, admin) is required' });
-    }
-    
+    // If type not provided, still allow login but validate type after password check
     const user = await User.findOne({ email });
-    if (!user) return res.status(400).json({ message: 'Invalid credentials' });
+    if (!user) return res.status(401).json({ message: 'Invalid email or password' });
     
     const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch) return res.status(400).json({ message: 'Invalid credentials' });
+    if (!isMatch) return res.status(401).json({ message: 'Invalid email or password' });
     
-    // Type validation: ensure user type matches login type
-    let isValidType = false;
-    
-    if (type === 'admin' && user.type === 'admin') {
-      isValidType = true;
-    } else if (type === 'doctor' && (user.type === 'doctor' || user.isDoctor)) {
-      isValidType = true;
-    } else if (type === 'user' && user.type === 'customer') {
-      isValidType = true;
-    }
-    
-    if (!isValidType) {
-      return res.status(401).json({ 
-        message: `Invalid login type. This account is a ${user.type === 'admin' ? 'admin' : user.isDoctor ? 'doctor' : 'user'} account.` 
-      });
+    // If type is provided, validate it matches user type
+    if (type) {
+      let isValidType = false;
+      
+      if (type === 'admin' && user.type === 'admin') {
+        isValidType = true;
+      } else if (type === 'doctor' && (user.type === 'doctor' || user.isDoctor)) {
+        isValidType = true;
+      } else if (type === 'user' && user.type === 'customer') {
+        isValidType = true;
+      }
+      
+      if (!isValidType) {
+        return res.status(401).json({ 
+          message: 'Invalid email or password' 
+        });
+      }
     }
     
     // Generate token with 7-day expiration
@@ -99,6 +98,7 @@ router.post('/login', async (req, res) => {
       } 
     });
   } catch (err) {
+    console.error('Login error:', err);
     res.status(500).json({ message: 'Server error' });
   }
 });
