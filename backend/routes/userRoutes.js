@@ -48,35 +48,39 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// Login with type validation
+// Login with type validation - STRICT role-based access
 router.post('/login', async (req, res) => {
   try {
     const { email, password, type } = req.body;
     
-    // If type not provided, still allow login but validate type after password check
+    // Type is ALWAYS required
+    if (!type || !['user', 'doctor', 'admin'].includes(type)) {
+      return res.status(400).json({ message: 'Invalid login type. Use: user, doctor, or admin' });
+    }
+    
+    // Find user by email
     const user = await User.findOne({ email });
-    if (!user) return res.status(401).json({ message: 'Invalid email or password' });
+    if (!user) {
+      return res.status(401).json({ message: 'Invalid email or password' });
+    }
     
+    // Check password
     const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch) return res.status(401).json({ message: 'Invalid email or password' });
+    if (!isMatch) {
+      return res.status(401).json({ message: 'Invalid email or password' });
+    }
     
-    // If type is provided, validate it matches user type
-    if (type) {
-      let isValidType = false;
-      
-      if (type === 'admin' && user.type === 'admin') {
-        isValidType = true;
-      } else if (type === 'doctor' && (user.type === 'doctor' || user.isDoctor)) {
-        isValidType = true;
-      } else if (type === 'user' && user.type === 'customer') {
-        isValidType = true;
-      }
-      
-      if (!isValidType) {
-        return res.status(401).json({ 
-          message: 'Invalid email or password' 
-        });
-      }
+    // STRICT Type validation - must match exactly
+    const isValidType = 
+      (type === 'admin' && user.type === 'admin') ||
+      (type === 'doctor' && (user.type === 'doctor' || user.isDoctor === true)) ||
+      (type === 'user' && user.type === 'customer');
+    
+    if (!isValidType) {
+      // Wrong tab for this account - return generic error
+      return res.status(401).json({ 
+        message: 'Invalid email or password' 
+      });
     }
     
     // Generate token with 7-day expiration
