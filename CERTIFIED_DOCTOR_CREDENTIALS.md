@@ -1,4 +1,4 @@
-# ✅ DocSpot Certified Doctor Credentials
+# ✅ MediConnect Certified Doctor Credentials
 
 **Last Updated:** February 8, 2026  
 **Status:** All credentials verified and configured ✅  
@@ -15,42 +15,42 @@ All credentials below are verified and ready for production use.
 
 | # | Name | Email | Password | Specialty | Experience | Location | Fee |
 |---|---|---|---|---|---|---|---|
-| 1 | Dr. Aisha Khan | aisha.khan@docspot.com | `cqp10k7eyun` | Family Medicine | 15 yrs | Austin, TX | $80 |
-| 2 | Dr. Liam Murphy | liam.murphy@docspot.com | `awoawmnrqcm` | Pediatrician | 9 yrs | Dallas, TX | $90 |
-| 3 | Dr. Sofia Garcia | sofia.garcia@docspot.com | `kvdheoyeg4` | Dermatologist | 10 yrs | San Antonio, TX | $110 |
-| 4 | Dr. Ethan Nguyen | ethan.nguyen@docspot.com | `89l0kb4tvrf` | Orthopedic Surgeon | 14 yrs | Houston, TX | $150 |
-| 5 | Dr. Maya Patel | maya.patel@docspot.com | `jbolbwsj0f` | Cardiologist | 12 yrs | Frisco, TX | $130 |
+| 1 | Dr. Aisha Khan | aisha.khan@MediConnect.com | `cqp10k7eyun` | Family Medicine | 15 yrs | Austin, TX | $80 |
+| 2 | Dr. Liam Murphy | liam.murphy@MediConnect.com | `awoawmnrqcm` | Pediatrician | 9 yrs | Dallas, TX | $90 |
+| 3 | Dr. Sofia Garcia | sofia.garcia@MediConnect.com | `kvdheoyeg4` | Dermatologist | 10 yrs | San Antonio, TX | $110 |
+| 4 | Dr. Ethan Nguyen | ethan.nguyen@MediConnect.com | `89l0kb4tvrf` | Orthopedic Surgeon | 14 yrs | Houston, TX | $150 |
+| 5 | Dr. Maya Patel | maya.patel@MediConnect.com | `jbolbwsj0f` | Cardiologist | 12 yrs | Frisco, TX | $130 |
 
 ### Group 2: Senior Specialists & Internal Medicine
 
 | # | Name | Email | Password | Specialty | Experience | Location | Fee |
 |---|---|---|---|---|---|---|---|
-| 6 | Dr. Robert Chen | robert.chen@docspot.com | `g7j4pqsx5j` | Internist | 16 yrs | Austin, TX | $95 |
-| 7 | Dr. Eleanor Williams | eleanor.williams@docspot.com | `27znbdmi9ia` | Geriatrician | 18 yrs | Dallas, TX | $105 |
-| 8 | Dr. James Anderson | james.anderson@docspot.com | `78izvsmiqwv` | Endocrinologist | 13 yrs | Houston, TX | $120 |
-| 9 | Dr. Patricia Martinez | patricia.martinez@docspot.com | `qwjt269nlx` | Gastroenterologist | 11 yrs | San Antonio, TX | $125 |
-| 10 | Dr. Michael Thompson | michael.thompson@docspot.com | `92era5wvkpd` | Neurologist | 14 yrs | Austin, TX | $135 |
+| 6 | Dr. Robert Chen | robert.chen@MediConnect.com | `g7j4pqsx5j` | Internist | 16 yrs | Austin, TX | $95 |
+| 7 | Dr. Eleanor Williams | eleanor.williams@MediConnect.com | `27znbdmi9ia` | Geriatrician | 18 yrs | Dallas, TX | $105 |
+| 8 | Dr. James Anderson | james.anderson@MediConnect.com | `78izvsmiqwv` | Endocrinologist | 13 yrs | Houston, TX | $120 |
+| 9 | Dr. Patricia Martinez | patricia.martinez@MediConnect.com | `qwjt269nlx` | Gastroenterologist | 11 yrs | San Antonio, TX | $125 |
+| 10 | Dr. Michael Thompson | michael.thompson@MediConnect.com | `92era5wvkpd` | Neurologist | 14 yrs | Austin, TX | $135 |
 
 ### Group 3: Surgical & Specialist Services
 
 | # | Name | Email | Password | Specialty | Experience | Location | Fee |
 |---|---|---|---|---|---|---|---|
-| 11 | Dr. Victoria Lee | victoria.lee@docspot.com | `s4no9ugvyo` | Ophthalmologist | 12 yrs | Dallas, TX | $140 |
-| 12 | Dr. David Johnson | david.johnson@docspot.com | `6gekfwncnr` | Otolaryngologist (ENT) | 10 yrs | Houston, TX | $115 |
-| 13 | Dr. Susan Davis | susan.davis@docspot.com | `napk0l31n4t` | Pulmonologist | 11 yrs | San Antonio, TX | $120 |
-| 14 | Dr. Christopher Brown | christopher.brown@docspot.com | `7rk76wtzewm` | Urologist | 13 yrs | Austin, TX | $125 |
-| 15 | Dr. Jennifer Wilson | jennifer.wilson@docspot.com | `etm3zumw5s8` | General Surgeon | 15 yrs | Dallas, TX | $140 |
+| 11 | Dr. Victoria Lee | victoria.lee@MediConnect.com | `s4no9ugvyo` | Ophthalmologist | 12 yrs | Dallas, TX | $140 |
+| 12 | Dr. David Johnson | david.johnson@MediConnect.com | `6gekfwncnr` | Otolaryngologist (ENT) | 10 yrs | Houston, TX | $115 |
+| 13 | Dr. Susan Davis | susan.davis@MediConnect.com | `napk0l31n4t` | Pulmonologist | 11 yrs | San Antonio, TX | $120 |
+| 14 | Dr. Christopher Brown | christopher.brown@MediConnect.com | `7rk76wtzewm` | Urologist | 13 yrs | Austin, TX | $125 |
+| 15 | Dr. Jennifer Wilson | jennifer.wilson@MediConnect.com | `etm3zumw5s8` | General Surgeon | 15 yrs | Dallas, TX | $140 |
 
 ### Group 4: Advanced Surgery & Specialists
 
 | # | Name | Email | Password | Specialty | Experience | Location | Fee |
 |---|---|---|---|---|---|---|---|
-| 16 | Dr. Richard Taylor | richard.taylor@docspot.com | `3vudo22kc88` | Neurosurgeon | 16 yrs | Houston, TX | $160 |
-| 17 | Dr. Angela Martinez | angela.martinez@docspot.com | `btrrsj70vgm` | Anesthesiologist | 12 yrs | San Antonio, TX | $130 |
-| 18 | Dr. Thomas Harris | thomas.harris@docspot.com | `o597sln0u4q` | Oncologist | 14 yrs | Austin, TX | $150 |
-| 19 | Dr. Lisa Garcia | lisa.garcia@docspot.com | `q6bgo1mnzoa` | Orthodontist | 9 yrs | Dallas, TX | $100 |
-| 20 | Dr. Mark Kelly | mark.kelly@docspot.com | `3cddyevwwf6` | Endodontist | 8 yrs | Houston, TX | $110 |
-| 21 | Dr. Rachel Adams | rachel.adams@docspot.com | `f4j1b3fg8a` | Oral Surgeon | 11 yrs | San Antonio, TX | $125 |
+| 16 | Dr. Richard Taylor | richard.taylor@MediConnect.com | `3vudo22kc88` | Neurosurgeon | 16 yrs | Houston, TX | $160 |
+| 17 | Dr. Angela Martinez | angela.martinez@MediConnect.com | `btrrsj70vgm` | Anesthesiologist | 12 yrs | San Antonio, TX | $130 |
+| 18 | Dr. Thomas Harris | thomas.harris@MediConnect.com | `o597sln0u4q` | Oncologist | 14 yrs | Austin, TX | $150 |
+| 19 | Dr. Lisa Garcia | lisa.garcia@MediConnect.com | `q6bgo1mnzoa` | Orthodontist | 9 yrs | Dallas, TX | $100 |
+| 20 | Dr. Mark Kelly | mark.kelly@MediConnect.com | `3cddyevwwf6` | Endodontist | 8 yrs | Houston, TX | $110 |
+| 21 | Dr. Rachel Adams | rachel.adams@MediConnect.com | `f4j1b3fg8a` | Oral Surgeon | 11 yrs | San Antonio, TX | $125 |
 
 ---
 
@@ -59,7 +59,7 @@ All credentials below are verified and ready for production use.
 These doctors can login but are marked as inactive until approved by admin.
 
 **How to Approve:**
-1. Login as Admin: `sysadmin@docspot.local` / `SecureAdmin@2024DocSpot`
+1. Login as Admin: `sysadmin@MediConnect.local` / `SecureAdmin@2024MediConnect`
 2. Go to "Approvals" tab
 3. Review application
 4. Click "Approve" button
@@ -76,14 +76,14 @@ These doctors can login but are marked as inactive until approved by admin.
 
 | Type | Email | Password | Role |
 |------|-------|----------|------|
-| Admin | sysadmin@docspot.local | `SecureAdmin@2024DocSpot` | Full System Access |
+| Admin | sysadmin@MediConnect.local | `SecureAdmin@2024MediConnect` | Full System Access |
 
 ---
 
 ## 📋 CREDENTIAL VERIFICATION CHECKLIST
 
 ✅ **All 21 approved doctors configured with:**
-- ✅ Unique email addresses in @docspot.com domain
+- ✅ Unique email addresses in @MediConnect.com domain
 - ✅ Unique secure passwords (8-11 characters, mixed case/numbers)
 - ✅ Specialty and experience level
 - ✅ Location (Austin, Dallas, Houston, San Antonio, Frisco TX)
@@ -117,7 +117,7 @@ These doctors can login but are marked as inactive until approved by admin.
 cd backend
 
 # Configure your .env file with:
-MONGO_URI=mongodb://localhost:27017/docspot
+MONGO_URI=mongodb://localhost:27017/MediConnect
 
 # Run seed script:
 npm run seed
@@ -128,7 +128,7 @@ npm run seed
 cd backend
 
 # Configure .env with MongoDB Atlas connection string:
-MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/docspot
+MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/MediConnect
 
 # Run seed script:
 npm run seed
@@ -150,17 +150,17 @@ npm run seed
 ### For Testing Different Roles:
 
 **Test as Patient/Customer:**
-- Email: `patient@docspot.com` (created during seed)
+- Email: `patient@MediConnect.com` (created during seed)
 - Password: `User@123`
 
 **Test as Doctor:**
 - Use any doctor email from above with their password
-- Example: `liam.murphy@docspot.com` / `awoawmnrqcm`
+- Example: `liam.murphy@MediConnect.com` / `awoawmnrqcm`
 - Doctor dashboard available immediately after login
 
 **Test as Admin:**
-- Email: `sysadmin@docspot.local`
-- Password: `SecureAdmin@2024DocSpot`
+- Email: `sysadmin@MediConnect.local`
+- Password: `SecureAdmin@2024MediConnect`
 - Full admin panel and approvals available
 
 ---
@@ -241,7 +241,7 @@ npm run seed
 2. **Test doctor login:**
    - Start frontend: `npm start`
    - Start backend: `node index.js`
-   - Login with: `liam.murphy@docspot.com` / `awoawmnrqcm`
+   - Login with: `liam.murphy@MediConnect.com` / `awoawmnrqcm`
 
 3. **Test appointment booking:**
    - Create test patient account

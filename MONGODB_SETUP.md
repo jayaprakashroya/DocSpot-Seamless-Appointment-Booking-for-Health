@@ -1,17 +1,17 @@
-# MongoDB Setup & Usage Guide for DocSpot
+# MongoDB Setup & Usage Guide for MediConnect
 
 ## ✅ Current Status
 
 Your MongoDB is now **fully connected and running**! Here's what's set up:
 
-- **Database**: `docspot` (local MongoDB)
+- **Database**: `MediConnect` (local MongoDB)
 - **Backend Server**: Running on `http://localhost:5000` ✅
 - **Frontend Server**: Running on `http://localhost:3000` ✅
-- **MongoDB Connection**: `mongodb://localhost:27017/docspot` ✅
+- **MongoDB Connection**: `mongodb://localhost:27017/MediConnect` ✅
 
 ---
 
-## How MongoDB Works with DocSpot
+## How MongoDB Works with MediConnect
 
 ### 1. Connection Flow
 
@@ -33,7 +33,7 @@ Your `.env` file in the backend folder:
 
 ```
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/docspot
+MONGO_URI=mongodb://localhost:27017/MediConnect
 JWT_SECRET=change_this_secret
 ```
 
@@ -42,7 +42,7 @@ JWT_SECRET=change_this_secret
 When the backend starts, Mongoose creates these collections:
 
 ```
-docspot/
+MediConnect/
 ├── users           (Patients/Admins)
 ├── doctors         (Doctor profiles)
 ├── appointments    (Appointments)
@@ -74,7 +74,7 @@ You can view your data in **MongoDB Compass** (already open):
 2. **Connection String**: `mongodb://localhost:27017`
 3. Click **Connect**
 
-You'll see the `docspot` database appear with collections:
+You'll see the `MediConnect` database appear with collections:
 - `users` → All registered users
 - `doctors` → Doctor profiles (pending/approved)
 - `appointments` → All bookings
@@ -257,7 +257,7 @@ npm run seed   # Creates demo users and doctor
 ### View MongoDB Data
 1. Open **MongoDB Compass** (already on your system)
 2. Connect to `mongodb://localhost:27017`
-3. Browse collections in `docspot` database
+3. Browse collections in `MediConnect` database
 
 ### Test APIs
 ```bash
@@ -357,7 +357,7 @@ curl http://localhost:5000/api/admin/stats \
    ```bash
    mongod --version  # Check if installed
    ```
-2. Check `.env` file has `MONGO_URI=mongodb://localhost:27017/docspot`
+2. Check `.env` file has `MONGO_URI=mongodb://localhost:27017/MediConnect`
 3. Verify backend config/db.js uses `process.env.MONGO_URI`
 
 ### "Collection Not Found"
@@ -377,7 +377,7 @@ curl http://localhost:5000/api/admin/stats \
 1. In Compass, use connection string: `mongodb://localhost:27017`
 2. No authentication required for local MongoDB
 3. Click "Connect"
-4. Click on `docspot` database to view collections
+4. Click on `MediConnect` database to view collections
 
 ### "Port 5000 Already in Use"
 
@@ -408,7 +408,7 @@ PORT=5001
 
 ### 2. Explore Data
 - Open MongoDB Compass
-- Click on `docspot` database
+- Click on `MediConnect` database
 - View `users`, `doctors`, `appointments` collections
 - See your bookings in real-time
 
@@ -472,7 +472,7 @@ Doctor.find().lean()  // Returns plain JS objects
 |-----------|--------|-----|
 | Backend API | Running | `http://localhost:5000` |
 | Frontend UI | Running | `http://localhost:3000` |
-| MongoDB | Connected | `mongodb://localhost:27017/docspot` |
+| MongoDB | Connected | `mongodb://localhost:27017/MediConnect` |
 | MongoDB Compass | Ready | View data live |
 
-**You can now use the full DocSpot application with real data persistence!** 🎉
+**You can now use the full MediConnect application with real data persistence!** 🎉

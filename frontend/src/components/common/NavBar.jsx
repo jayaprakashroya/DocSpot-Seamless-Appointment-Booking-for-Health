@@ -216,7 +216,7 @@ const NavBar = () => {
           {/* Logo */}
           <Link to="/" className="navbar-logo">
             <span className="logo-icon">🏥</span>
-            <span className="logo-text">DocSpot</span>
+            <span className="logo-text">MediConnect</span>
           </Link>
 
           {/* Desktop Navigation */}

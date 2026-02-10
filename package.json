@@ -1,5 +1,5 @@
 {
-  "name": "docspot",
+  "name": "mediconnect",
   "version": "1.0.0",
   "scripts": {
     "dev:all": "node dev.js",

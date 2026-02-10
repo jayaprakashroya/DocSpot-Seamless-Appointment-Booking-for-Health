@@ -1,12 +1,12 @@
-# DocSpot — Project Summary (Consolidated)
+# MediConnect — Project Summary (Consolidated)
 
-This document consolidates key information about the DocSpot project: purpose, architecture, setup, runtime commands, API endpoints, sample credentials for testing, and useful notes. It replaces legacy credential/summary files so there's a single canonical reference.
+This document consolidates key information about the MediConnect project: purpose, architecture, setup, runtime commands, API endpoints, sample credentials for testing, and useful notes. It replaces legacy credential/summary files so there's a single canonical reference.
 
 ---
 
 ## Project Overview
 
-DocSpot is a MERN (MongoDB, Express, React, Node) application that provides online appointment booking for healthcare. It supports three roles: User (patient), Doctor, and Admin. Key flows include doctor application & admin approval, appointment booking with slot validation, rescheduling, and admin analytics.
+MediConnect is a MERN (MongoDB, Express, React, Node) application that provides online appointment booking for healthcare. It supports three roles: User (patient), Doctor, and Admin. Key flows include doctor application & admin approval, appointment booking with slot validation, rescheduling, and admin analytics.
 
 ## Tech Stack
 
@@ -100,12 +100,12 @@ Refer to `README.md` for full API examples and usage.
 These are intended for local development/testing. Do **not** use in production.
 
 Admin (seeded / demo)
-- Email: admin@docspot.test
+- Email: admin@MediConnect.test
 - Password: adminpass
 
 Alternative admin (from other quick files)
-- Email: sysadmin@docspot.local
-- Password: SecureAdmin@2024DocSpot
+- Email: sysadmin@MediConnect.local
+- Password: SecureAdmin@2024MediConnect
 
 Test User (example)
 - Email: testuser@example.com

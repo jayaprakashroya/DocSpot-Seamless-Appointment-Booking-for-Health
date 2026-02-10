@@ -16,7 +16,7 @@
     "insuranceAccepted": ["Aetna", "BlueCross", "Cigna"],
     "education": ["MD - University of Texas","Family Medicine Residency - Johns Hopkins"],
     "certifications": ["Board Certified Family Medicine", "BLS"],
-    "contact": { "phone": "+1-512-555-0123", "email": "aisha.khan@docspot.com" },
+    "contact": { "phone": "+1-512-555-0123", "email": "aisha.khan@healthcare.com" },
     "availability": {
       "monday": ["09:00","12:00","14:00","16:00"],
       "wednesday": ["09:00","11:00","13:00","15:00"],
@@ -41,7 +41,7 @@
     "insuranceAccepted": ["Medicare", "Aetna", "UnitedHealthcare"],
     "education": ["MD - University of Texas","Residency - Pediatrics, Baylor"],
     "certifications": ["PALS","BLS"],
-    "contact": { "phone": "+1-214-555-0167", "email": "liam.murphy@docspot.com" },
+    "contact": { "phone": "+1-214-555-0167", "email": "liam.murphy@healthcare.com" },
     "availability": { "tuesday": ["08:30","10:00","11:30","14:00"], "thursday": ["09:00","11:00","13:30"] },
     "initialPassword": "awoawmnrqcm"
   },
@@ -62,7 +62,7 @@
     "insuranceAccepted": ["Cigna", "Humana"],
     "education": ["MD - University of Madrid","Dermatology Fellowship - Johns Hopkins"],
     "certifications": ["Dermatology Board Certified"],
-    "contact": { "phone": "+1-210-555-0199", "email": "sofia.garcia@docspot.com" },
+    "contact": { "phone": "+1-210-555-0199", "email": "sofia.garcia@healthcare.com" },
     "availability": { "monday": ["10:00","13:00"], "tuesday": ["09:00","12:00","15:00"], "friday": ["09:30","11:00"] },
     "initialPassword": "kvdheoyeg4"
   },
@@ -83,7 +83,7 @@
     "insuranceAccepted": ["Aetna", "BlueCross", "UnitedHealthcare"],
     "education": ["MD - Baylor College of Medicine","Fellowship - Sports Medicine"],
     "certifications": ["Board Certified Orthopedics"],
-    "contact": { "phone": "+1-713-555-0144", "email": "ethan.nguyen@docspot.com" },
+    "contact": { "phone": "+1-713-555-0144", "email": "ethan.nguyen@healthcare.com" },
     "availability": { "wednesday": ["08:30","10:30","14:00"], "thursday": ["09:00","12:00"] },
     "initialPassword": "89l0kb4tvrf"
   },
@@ -104,7 +104,7 @@
     "insuranceAccepted": ["Cigna","Humana"],
     "education": ["MBBS - Mumbai University","Fellowship - Cardiology, Stanford"],
     "certifications": ["ACLS", "BLS"],
-    "contact": { "phone": "+1-972-555-0188", "email": "maya.patel@docspot.com" },
+    "contact": { "phone": "+1-972-555-0188", "email": "maya.patel@healthcare.com" },
     "availability": { "monday": ["09:00","11:00","16:00"], "thursday": ["10:00","13:00"] },
     "initialPassword": "jbolbwsj0f"
   },
@@ -125,7 +125,7 @@
     "insuranceAccepted": ["Medicare", "Aetna", "BlueCross"],
     "education": ["MD - Stanford University","Residency - Internal Medicine, Mayo Clinic"],
     "certifications": ["Board Certified Internal Medicine", "ABIM"],
-    "contact": { "phone": "+1-512-555-0145", "email": "robert.chen@docspot.com" },
+    "contact": { "phone": "+1-512-555-0145", "email": "robert.chen@healthcare.com" },
     "availability": { "tuesday": ["09:00","11:30","14:00"], "friday": ["10:00","13:00","15:30"] },
     "initialPassword": "g7j4pqsx5j"
   },
@@ -146,7 +146,7 @@
     "insuranceAccepted": ["Medicare", "Medicaid", "Aetna"],
     "education": ["MD - Johns Hopkins","Geriatric Medicine Fellowship - UCLA"],
     "certifications": ["Board Certified Geriatric Medicine"],
-    "contact": { "phone": "+1-214-555-0178", "email": "eleanor.williams@docspot.com" },
+    "contact": { "phone": "+1-214-555-0178", "email": "eleanor.williams@healthcare.com" },
     "availability": { "monday": ["08:30","11:00"], "wednesday": ["09:00","12:00","14:00"], "friday": ["09:30","12:30"] },
     "initialPassword": "27znbdmi9ia"
   },
@@ -167,7 +167,7 @@
     "insuranceAccepted": ["Aetna", "Cigna", "UnitedHealthcare"],
     "education": ["MD - University of Pennsylvania","Fellowship - Endocrinology, Harvard"],
     "certifications": ["Board Certified Endocrinology", "Diabetes Specialist"],
-    "contact": { "phone": "+1-713-555-0167", "email": "james.anderson@docspot.com" },
+    "contact": { "phone": "+1-713-555-0167", "email": "james.anderson@healthcare.com" },
     "availability": { "tuesday": ["09:00","12:00","14:30"], "thursday": ["10:00","13:00"] },
     "initialPassword": "78izvsmiqwv"
   },
@@ -188,7 +188,7 @@
     "insuranceAccepted": ["BlueCross", "Cigna", "Humana"],
     "education": ["MD - University of Texas","Gastroenterology Fellowship - Mayo Clinic"],
     "certifications": ["Board Certified Gastroenterology", "ERCP Certified"],
-    "contact": { "phone": "+1-210-555-0189", "email": "patricia.martinez@docspot.com" },
+    "contact": { "phone": "+1-210-555-0189", "email": "patricia.martinez@healthcare.com" },
     "availability": { "monday": ["09:30","12:30"], "wednesday": ["10:00","13:30","15:00"] },
     "initialPassword": "qwjt269nlx"
   },
@@ -209,7 +209,7 @@
     "insuranceAccepted": ["Medicare", "Aetna", "BlueCross"],
     "education": ["MD - Yale University","Neurology Residency - Johns Hopkins"],
     "certifications": ["Board Certified Neurology", "Stroke Specialist"],
-    "contact": { "phone": "+1-512-555-0134", "email": "michael.thompson@docspot.com" },
+    "contact": { "phone": "+1-512-555-0134", "email": "michael.thompson@healthcare.com" },
     "availability": { "tuesday": ["09:00","11:30","14:00"], "thursday": ["10:00","12:30","15:00"] },
     "initialPassword": "92era5wvkpd"
   },
@@ -230,7 +230,7 @@
     "insuranceAccepted": ["Aetna", "BlueCross", "Cigna"],
     "education": ["MD - Washington University","Ophthalmology Residency - Wills Eye Hospital"],
     "certifications": ["Board Certified Ophthalmology", "LASIK Surgeon"],
-    "contact": { "phone": "+1-214-555-0145", "email": "victoria.lee@docspot.com" },
+    "contact": { "phone": "+1-214-555-0145", "email": "victoria.lee@healthcare.com" },
     "availability": { "monday": ["09:00","11:30"], "wednesday": ["10:00","12:30","14:30"], "friday": ["09:30","12:00"] },
     "initialPassword": "s4no9ugvyo"
   },
@@ -251,7 +251,7 @@
     "insuranceAccepted": ["BlueCross", "Cigna", "UnitedHealthcare"],
     "education": ["MD - Northwestern University","ENT Residency - Mass Eye and Ear"],
     "certifications": ["Board Certified Otolaryngology"],
-    "contact": { "phone": "+1-713-555-0123", "email": "david.johnson@docspot.com" },
+    "contact": { "phone": "+1-713-555-0123", "email": "david.johnson@healthcare.com" },
     "availability": { "tuesday": ["09:00","11:30"], "thursday": ["10:00","13:00","15:00"] },
     "initialPassword": "6gekfwncnr"
   },
@@ -272,7 +272,7 @@
     "insuranceAccepted": ["Medicare", "Aetna", "Cigna"],
     "education": ["MD - University of California","Pulmonology Fellowship - Stanford"],
     "certifications": ["Board Certified Pulmonology", "Sleep Medicine Specialist"],
-    "contact": { "phone": "+1-210-555-0156", "email": "susan.davis@docspot.com" },
+    "contact": { "phone": "+1-210-555-0156", "email": "susan.davis@healthcare.com" },
     "availability": { "monday": ["09:00","12:00"], "wednesday": ["10:00","13:00","15:00"] },
     "initialPassword": "napk0l31n4t"
   },
@@ -293,7 +293,7 @@
     "insuranceAccepted": ["Aetna", "BlueCross", "UnitedHealthcare"],
     "education": ["MD - UCLA","Urology Residency - University of Michigan"],
     "certifications": ["Board Certified Urology", "Minimally Invasive Surgery"],
-    "contact": { "phone": "+1-512-555-0167", "email": "christopher.brown@docspot.com" },
+    "contact": { "phone": "+1-512-555-0167", "email": "christopher.brown@healthcare.com" },
     "availability": { "tuesday": ["09:00","12:00"], "thursday": ["10:00","13:00","15:00"] },
     "initialPassword": "7rk76wtzewm"
   },
@@ -314,7 +314,7 @@
     "insuranceAccepted": ["Medicare", "Aetna", "BlueCross"],
     "education": ["MD - University of Chicago","General Surgery Residency - Mayo Clinic"],
     "certifications": ["Board Certified General Surgery", "ACLS"],
-    "contact": { "phone": "+1-214-555-0189", "email": "jennifer.wilson@docspot.com" },
+    "contact": { "phone": "+1-214-555-0189", "email": "jennifer.wilson@healthcare.com" },
     "availability": { "monday": ["09:00","11:00"], "wednesday": ["10:00","12:00","14:00"], "friday": ["09:30","11:30"] },
     "initialPassword": "etm3zumw5s8"
   },
@@ -335,7 +335,7 @@
     "insuranceAccepted": ["Medicare", "BlueCross", "Cigna"],
     "education": ["MD - Harvard Medical School","Neurosurgery Fellowship - Stanford"],
     "certifications": ["Board Certified Neurosurgery", "Spine Surgery Specialist"],
-    "contact": { "phone": "+1-713-555-0134", "email": "richard.taylor@docspot.com" },
+    "contact": { "phone": "+1-713-555-0134", "email": "richard.taylor@healthcare.com" },
     "availability": { "tuesday": ["08:30","10:30"], "thursday": ["09:00","11:00","14:00"] },
     "initialPassword": "3vudo22kc88"
   },
@@ -356,7 +356,7 @@
     "insuranceAccepted": ["Aetna", "Cigna", "Humana"],
     "education": ["MD - Texas Tech","Anesthesiology Residency - Baylor"],
     "certifications": ["Board Certified Anesthesiology", "ACLS"],
-    "contact": { "phone": "+1-210-555-0167", "email": "angela.martinez@docspot.com" },
+    "contact": { "phone": "+1-210-555-0167", "email": "angela.martinez@healthcare.com" },
     "availability": { "monday": ["09:00","12:00"], "wednesday": ["10:00","13:00"], "friday": ["09:30","12:30"] },
     "initialPassword": "btrrsj70vgm"
   },
@@ -377,7 +377,7 @@
     "insuranceAccepted": ["Medicare", "Aetna", "BlueCross"],
     "education": ["MD - Duke University","Oncology Fellowship - Memorial Sloan Kettering"],
     "certifications": ["Board Certified Medical Oncology", "Chemotherapy Specialist"],
-    "contact": { "phone": "+1-512-555-0178", "email": "thomas.harris@docspot.com" },
+    "contact": { "phone": "+1-512-555-0178", "email": "thomas.harris@healthcare.com" },
     "availability": { "tuesday": ["09:00","11:30"], "thursday": ["10:00","13:00"], "friday": ["09:30","12:00"] },
     "initialPassword": "o597sln0u4q"
   },
@@ -398,7 +398,7 @@
     "insuranceAccepted": ["Dental Plus", "SmileCare", "DentalMax"],
     "education": ["DDS - University of Texas","Orthodontics Residency - UT Health"],
     "certifications": ["Board Certified Orthodontist"],
-    "contact": { "phone": "+1-214-555-0134", "email": "lisa.garcia@docspot.com" },
+    "contact": { "phone": "+1-214-555-0134", "email": "lisa.garcia@healthcare.com" },
     "availability": { "monday": ["10:00","13:00"], "wednesday": ["09:30","12:00","14:30"], "friday": ["10:00","13:00"] },
     "initialPassword": "q6bgo1mnzoa"
   },
@@ -419,7 +419,7 @@
     "insuranceAccepted": ["Dental Plus", "SmileCare", "DentalMax"],
     "education": ["DDS - University of Houston","Endodontics Specialty - Baylor"],
     "certifications": ["Board Certified Endodontist", "RCT Specialist"],
-    "contact": { "phone": "+1-713-555-0145", "email": "mark.kelly@docspot.com" },
+    "contact": { "phone": "+1-713-555-0145", "email": "mark.kelly@healthcare.com" },
     "availability": { "tuesday": ["09:00","12:00","14:00"], "thursday": ["10:00","13:00"] },
     "initialPassword": "3cddyevwwf6"
   },
@@ -440,7 +440,7 @@
     "insuranceAccepted": ["Dental Plus", "SmileCare", "Aetna"],
     "education": ["DDS - UT San Antonio","Oral Surgery Fellowship - Johns Hopkins"],
     "certifications": ["Board Certified Oral Surgeon", "Implant Specialist"],
-    "contact": { "phone": "+1-210-555-0178", "email": "rachel.adams@docspot.com" },
+    "contact": { "phone": "+1-210-555-0178", "email": "rachel.adams@healthcare.com" },
     "availability": { "monday": ["09:00","11:30"], "wednesday": ["10:00","12:30","14:30"], "friday": ["09:30","12:00"] },
     "initialPassword": "f4j1b3fg8a"
   }

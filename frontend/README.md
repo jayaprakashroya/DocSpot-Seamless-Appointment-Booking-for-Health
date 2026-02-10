@@ -1,6 +1,6 @@
-# DocSpot Frontend
+# MediConnect Frontend
 
-React 18 application for the DocSpot appointment booking platform.
+React 18 application for the MediConnect appointment booking platform.
 
 ## Setup
 

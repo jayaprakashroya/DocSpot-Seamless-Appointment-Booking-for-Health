@@ -127,15 +127,15 @@ npm start
 # Mac/Linux: mongosh
 
 # Then run these commands:
-use docspot
-db.users.findOne({ email: "liam.murphy@docspot.com" })
+use MediConnect
+db.users.findOne({ email: "liam.murphy@MediConnect.com" })
 ```
 
 **Expected Result:**
 ```javascript
 {
   _id: ObjectId(...),
-  email: "liam.murphy@docspot.com",
+  email: "liam.murphy@MediConnect.com",
   name: "Dr. Liam Murphy",
   password: "$2a$10$...",  // Long hashed string
   type: "doctor",
@@ -161,7 +161,7 @@ npm run seed
 
 **Enter:**
 ```
-Email:    liam.murphy@docspot.com
+Email:    liam.murphy@MediConnect.com
 Password: awoawmnrqcm
 ```
 

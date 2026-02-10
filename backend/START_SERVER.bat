@@ -1,6 +1,6 @@
 @echo off
 echo.
-echo 🏥 DocSpot Backend Server Startup Script
+echo 🏥 MediConnect Backend Server Startup Script
 echo ========================================
 echo.
 
@@ -33,7 +33,7 @@ if not exist ".env" (
     echo ⚠️  .env file not found. Creating one...
     (
         echo PORT=5000
-        echo MONGO_URI=mongodb://localhost:27017/docspot
+        echo MONGO_URI=mongodb://localhost:27017/mediconnect
         echo JWT_SECRET=change_this_secret
         echo FRONTEND_ORIGIN=http://localhost:3000
         echo NODE_ENV=development
@@ -45,7 +45,7 @@ if not exist ".env" (
 )
 
 echo.
-echo 🚀 Starting DocSpot Backend Server...
+echo 🚀 Starting MediConnect Backend Server...
 echo ========================================
 echo.
 echo Server starting on http://localhost:5000

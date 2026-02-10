@@ -1,8 +1,8 @@
-# DocSpot Frontend Architecture
+# mediconnect Frontend Architecture
 
 ## Overview
 
-DocSpot frontend is built with **React 18** and **React Router v6**, following component-based architecture with clear separation of concerns. This document explains the structure and design patterns used.
+mediconnect frontend is built with **React 18** and **React Router v6**, following component-based architecture with clear separation of concerns. This document explains the structure and design patterns used.
 
 ## Core Principles
 
@@ -678,7 +678,7 @@ const handlePageChange = (newPage) => {
 
 ## Conclusion
 
-DocSpot frontend follows **component-based architecture** with clear data flow. Key patterns include:
+MediConnect frontend follows **component-based architecture** with clear data flow. Key patterns include:
 - **Protected routes** for role-based access
 - **Centralized API** layer for consistent requests
 - **Loading/error states** for every async operation

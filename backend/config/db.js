@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async (retries = 5, delay = 3000) => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/docspot', {
+    const conn = await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/mediconnect', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       autoIndex: true,

@@ -1,4 +1,4 @@
-# 🚀 QUICK START GUIDE - DocSpot
+# 🚀 QUICK START GUIDE - MediConnect
 
 ## Why Credentials Stop Working
 
@@ -15,7 +15,7 @@
 
 ---
 
-## ✅ STEP-BY-STEP: Starting DocSpot Properly
+## ✅ STEP-BY-STEP: Starting MediConnect Properly
 
 ### STEP 1: Start MongoDB (First Priority!)
 
@@ -40,7 +40,7 @@ sudo systemctl start mongod
 ### STEP 2: Start Backend Server
 
 **Windows (Easiest):**
-1. Go to: `c:\Users\maner\Downloads\DocSpot...\backend\`
+1. Go to: `c:\Users\maner\Downloads\MediConnect...\backend\`
 2. Double-click: `START_SERVER.bat`
 3. Wait for setup to complete
 
@@ -73,14 +73,14 @@ Compiled successfully!
 Local: http://localhost:3000
 ```
 
-✅ **All running? Great! You're ready to use DocSpot!**
+✅ **All running? Great! You're ready to use MediConnect!**
 
 ---
 
 ## 🔑 Login with Doctor Account
 
 ```
-Email:    liam.murphy@docspot.com
+Email:    liam.murphy@MediConnect.com
 Password: awoawmnrqcm
 ```
 
@@ -186,7 +186,7 @@ If `"connected": false` → MongoDB is not running!
 
 ## 🔄 Daily Routine (Copy This!)
 
-Every day before using DocSpot:
+Every day before using MediConnect:
 
 ### Morning Checklist
 - [ ] Start MongoDB
@@ -197,7 +197,7 @@ Every day before using DocSpot:
 
 ### Daily Login Flow
 1. Open browser → http://localhost:3000
-2. Enter credentials: `liam.murphy@docspot.com` / `awoawmnrqcm`
+2. Enter credentials: `liam.murphy@MediConnect.com` / `awoawmnrqcm`
 3. Click Login
 4. ✅ Should appear on dashboard
 
@@ -275,7 +275,7 @@ If any are missing, login won't work!
 2. Navigate to: `http://localhost:3000`
    - Should load login page
 
-3. Login with: `liam.murphy@docspot.com` / `awoawmnrqcm`
+3. Login with: `liam.murphy@MediConnect.com` / `awoawmnrqcm`
    - Should work immediately ✅
 
 **If all three work → Everything is configured correctly!**

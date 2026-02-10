@@ -1,4 +1,4 @@
-# DocSpot — Seamless Appointment Booking for Health
+# MediConnect — Seamless Appointment Booking for Health
 
 A **production-ready MERN** application for online doctor appointment booking. Patients can browse doctors with advanced filtering, book appointments with real-time slot validation, and manage their bookings. Doctors apply for approval and manage their schedules. Admins oversee the platform with analytics dashboards.
 
@@ -156,7 +156,7 @@ throw new AppError('Slot already booked', 409);
 ## Project Structure
 
 ```
-docspot/
+MediConnect/
 ├── backend/
 │   ├── config/          # Database connection
 │   ├── controllers/     # Request handlers

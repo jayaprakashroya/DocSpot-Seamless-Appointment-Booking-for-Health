@@ -20,7 +20,7 @@ connectDB();
 // Root route
 app.get('/', (req, res) => {
   res.json({ 
-    message: 'DocSpot Seamless Appointment Booking API',
+    message: 'MediConnect Seamless Appointment Booking API',
     version: '1.0.0',
     status: 'running',
     endpoints: {

@@ -1,8 +1,8 @@
-# DocSpot Backend Architecture
+# mediconnect Backend Architecture
 
 ## Overview
 
-DocSpot backend is designed with **production-ready patterns** focusing on maintainability, scalability, and testability. This document explains the architecture decisions and how the system works.
+mediconnect backend is designed with **production-ready patterns** focusing on maintainability, scalability, and testability. This document explains the architecture decisions and how the system works.
 
 ## Core Principles
 
@@ -561,7 +561,7 @@ describe('appointmentService.checkSlotAvailability', () => {
 
 ## Conclusion
 
-DocSpot backend follows **production-ready patterns** that scale from MVP to enterprise. The architecture emphasizes:
+mediconnect backend follows **production-ready patterns** that scale from MVP to enterprise. The architecture emphasizes:
 - **Clean Code**: Services are testable and maintainable
 - **Data Integrity**: Double booking is impossible
 - **Consistent Errors**: All errors follow same format

@@ -19,7 +19,7 @@ if (process.env.SMTP_HOST && process.env.SMTP_PORT) {
 
 async function sendMail(opts) {
   return transporter.sendMail({
-    from: process.env.SMTP_FROM || 'no-reply@docspot.test',
+    from: process.env.SMTP_FROM || 'no-reply@healthcare.test',
     ...opts
   });
 }

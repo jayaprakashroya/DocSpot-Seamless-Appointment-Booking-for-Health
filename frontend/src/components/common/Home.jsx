@@ -77,7 +77,7 @@ const Home = () => {
       <section className="hero-section">
         <div className="hero-content">
           <h1 className="hero-title">
-            Welcome{user ? ` back, ${user.name}` : ' to DocSpot'} 👋
+            Welcome{user ? ` back, ${user.name}` : ' to MediConnect'} 👋
           </h1>
           <p className="hero-subtitle">
             Find and book appointments with verified doctors in seconds
@@ -204,9 +204,9 @@ const Home = () => {
         )}
       </section>
 
-      {/* Why Choose DocSpot Section */}
+      {/* Why Choose MediConnect Section */}
       <section className="features-section">
-        <h2>Why Choose DocSpot?</h2>
+        <h2>Why Choose MediConnect?</h2>
         <div className="features-grid">
           <div className="feature-card">
             <div className="feature-icon">🛡️</div>
@@ -248,7 +248,7 @@ const Home = () => {
             <div className="cta-text">
               <span className="cta-badge">✨ Get Started Today</span>
               <h2>Ready to book your first appointment?</h2>
-              <p>Join thousands of satisfied patients who trust DocSpot for seamless healthcare booking</p>
+              <p>Join thousands of satisfied patients who trust MediConnect for seamless healthcare booking</p>
               <ul className="cta-benefits">
                 <li>✓ Instant appointment confirmation</li>
                 <li>✓ Verified doctors & specialists</li>

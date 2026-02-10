@@ -23,12 +23,12 @@ const seed = async () => {
     console.log('Database cleared');
 
     // Create admin user
-    const adminPassword = await bcrypt.hash('SecureAdmin@2024DocSpot', 10);
+    const adminPassword = await bcrypt.hash('SecureAdmin@2024MediConnect', 10);
     const adminUser = new User({
       name: 'System Administrator',
-      email: 'sysadmin@docspot.local',
+      email: 'sysadmin@healthcare.local',
       password: adminPassword,
-      phone: '+1-800-DOCSPOT',
+      phone: '+1-800-MEDICONNECT',
       type: 'admin',
       isActive: true,
     });

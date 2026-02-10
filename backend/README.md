@@ -1,6 +1,6 @@
-# DocSpot Backend
+# mediconnect Backend
 
-Express.js server with MongoDB for the DocSpot appointment booking platform.
+Express.js server with MongoDB for the mediconnect appointment booking platform.
 
 ## Setup
 
@@ -18,7 +18,7 @@ cp .env.example .env
 Edit `.env`:
 ```
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/docspot
+MONGO_URI=mongodb://localhost:27017/mediconnect
 JWT_SECRET=your_secret_key_here
 ```
 

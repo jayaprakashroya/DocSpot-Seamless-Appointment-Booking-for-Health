@@ -1,7 +1,7 @@
 # ✅ Login Credentials Persistence Fix
 
 ## Problem
-Doctor login credentials (like `liam.murphy@docspot.com`) work on Day 1, but don't work on Day 2 when trying to login again.
+Doctor login credentials (like `liam.murphy@MediConnect.com`) work on Day 1, but don't work on Day 2 when trying to login again.
 
 ## Root Causes
 1. **Backend server crashed or wasn't restarted** - The server process exited
@@ -95,11 +95,11 @@ http://localhost:5000/api/health/detailed
 # Login to MongoDB CLI
 mongosh
 
-# Switch to docspot database
-use docspot
+# Switch to MediConnect database
+use MediConnect
 
 # Check if doctor exists
-db.users.findOne({ email: "liam.murphy@docspot.com" })
+db.users.findOne({ email: "liam.murphy@MediConnect.com" })
 
 # Should return doctor object with password hash
 ```
@@ -155,7 +155,7 @@ npm start
 
 **Step 5: Verify Everything is Working**
 - ✅ Navigate to http://localhost:3000
-- ✅ Try logging in with: `liam.murphy@docspot.com` / `awoawmnrqcm`
+- ✅ Try logging in with: `liam.murphy@MediConnect.com` / `awoawmnrqcm`
 - ✅ Should work immediately
 
 ---
@@ -197,7 +197,7 @@ Your credentials are **permanently** stored in MongoDB:
 - ✅ Only lost if database is deleted
 
 **Data Locations:**
-- Database: `C:\Program Files\MongoDB\data\docspot\` (Windows)
+- Database: `C:\Program Files\MongoDB\data\MediConnect\` (Windows)
 - Or your configured MongoDB path
 
 ---
@@ -253,7 +253,7 @@ Look at the terminal where backend is running:
 - Change PORT in `.env` if 5000 is taken
 
 **Credentials still not working?**
-- Verify credentials are in database: `use docspot; db.users.find()`
+- Verify credentials are in database: `use MediConnect; db.users.find()`
 - Check password is hashed (long string starting with `$2a$`)
 - Run seed again to restore all defaults
 

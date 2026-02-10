@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🏥 DocSpot Backend Server Startup Script"
+echo "🏥 MediConnect Backend Server Startup Script"
 echo "========================================"
 echo ""
 
@@ -54,7 +54,7 @@ if [ ! -f ".env" ]; then
     echo "⚠️  .env file not found. Creating one..."
     cat > .env << EOF
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/docspot
+MONGO_URI=mongodb://localhost:27017/mediconnect
 JWT_SECRET=change_this_secret
 FRONTEND_ORIGIN=http://localhost:3000
 NODE_ENV=development
@@ -66,7 +66,7 @@ else
 fi
 
 echo ""
-echo "🚀 Starting DocSpot Backend Server..."
+echo "🚀 Starting MediConnect Backend Server..."
 echo "========================================"
 echo ""
 echo "Server starting on http://localhost:5000"

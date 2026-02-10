@@ -1,8 +1,8 @@
-# DocSpot - Real-World Deployment Guide
+# MediConnect - Real-World Deployment Guide
 
 ## 🎯 Quick Start for Production Use
 
-DocSpot is now fully seeded with real doctor accounts and ready for real-world deployment testing. Here's how to get started:
+MediConnect is now fully seeded with real doctor accounts and ready for real-world deployment testing. Here's how to get started:
 
 ---
 
@@ -32,38 +32,38 @@ DocSpot is now fully seeded with real doctor accounts and ready for real-world d
 
 ### Admin Account:
 ```
-Email: sysadmin@docspot.local
-Password: SecureAdmin@2024DocSpot
+Email: sysadmin@MediConnect.local
+Password: SecureAdmin@2024MediConnect
 ```
 
 ### Doctor Accounts (All with password: `Doctor@123`):
 ```
 1. Dr. Liam Murphy (Pediatrician)
-   Email: liam.murphy@docspot.com
+   Email: liam.murphy@MediConnect.com
    Specialty: Pediatrician
    Experience: 9 years
    Fee: ₹90
 
 2. Dr. Aisha Khan (Family Medicine)
-   Email: aisha.khan@docspot.com
+   Email: aisha.khan@MediConnect.com
    Specialty: Family Medicine Physician
    Experience: 15 years
    Fee: ₹80
 
 3. Dr. Sofia Garcia (Dermatologist)
-   Email: sofia.garcia@docspot.com
+   Email: sofia.garcia@MediConnect.com
    Specialty: Dermatologist
    Experience: 10 years
    Fee: ₹110
 
 4. Dr. Ethan Nguyen (Orthopedic Surgeon)
-   Email: ethan.nguyen@docspot.com
+   Email: ethan.nguyen@MediConnect.com
    Specialty: Orthopedic Surgeon
    Experience: 14 years
    Fee: ₹150
 
 5. Dr. Maya Patel (Cardiologist)
-   Email: maya.patel@docspot.com
+   Email: maya.patel@MediConnect.com
    Specialty: Cardiologist
    Experience: 12 years
    Fee: ₹120
@@ -106,7 +106,7 @@ npm start
 ### Step 1: Login as Doctor
 ```
 1. Go to http://localhost:3000/login
-2. Enter: liam.murphy@docspot.com
+2. Enter: liam.murphy@MediConnect.com
 3. Password: Doctor@123
 4. Click "Sign In"
 ```
@@ -212,7 +212,7 @@ Response: Full doctor profile
 ```
 POST /auth/login
 Body: {
-  email: "liam.murphy@docspot.com",
+  email: "liam.murphy@MediConnect.com",
   password: "Doctor@123"
 }
 
@@ -221,7 +221,7 @@ Response: {
   user: {
     _id: "user_id",
     name: "Dr. Liam Murphy",
-    email: "liam.murphy@docspot.com",
+    email: "liam.murphy@MediConnect.com",
     type: "doctor"
   }
 }
@@ -250,7 +250,7 @@ Response: {
 ### Environment Variables (.env):
 ```
 # MongoDB
-MONGODB_URI=mongodb://localhost:27017/docspot
+MONGODB_URI=mongodb://localhost:27017/MediConnect
 
 # Server
 PORT=3001

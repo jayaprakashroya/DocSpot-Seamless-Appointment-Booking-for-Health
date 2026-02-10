@@ -1,8 +1,8 @@
-# DocSpot Deployment Guide
+# MediConnect Deployment Guide
 
 ## Production Deployment Checklist
 
-Deploy DocSpot to the cloud with confidence. This guide covers backend (Node.js), database (MongoDB Atlas), and frontend (Vercel/Netlify).
+Deploy MediConnect to the cloud with confidence. This guide covers backend (Node.js), database (MongoDB Atlas), and frontend (Vercel/Netlify).
 
 ---
 
@@ -35,7 +35,7 @@ Deploy DocSpot to the cloud with confidence. This guide covers backend (Node.js)
 
 1. Go to "Database Access"
 2. Click "Add New Database User"
-3. Username: `docspot_admin`
+3. Username: `MediConnect_admin`
 4. Password: Generate secure password (save it!)
 5. Database User Privileges: **Read and write to any database**
 6. Click "Add User"
@@ -55,7 +55,7 @@ Deploy DocSpot to the cloud with confidence. This guide covers backend (Node.js)
 4. Copy connection string:
 
 ```
-mongodb+srv://docspot_admin:<PASSWORD>@cluster0.xxx.mongodb.net/docspot?retryWrites=true&w=majority
+mongodb+srv://MediConnect_admin:<PASSWORD>@cluster0.xxx.mongodb.net/MediConnect?retryWrites=true&w=majority
 ```
 
 Replace `<PASSWORD>` with your database user password.
@@ -74,7 +74,7 @@ cd backend
 # Create .env for production
 cat > .env.production << EOF
 PORT=5000
-MONGO_URI=mongodb+srv://docspot_admin:<PASSWORD>@cluster0.xxx.mongodb.net/docspot?retryWrites=true&w=majority
+MONGO_URI=mongodb+srv://MediConnect_admin:<PASSWORD>@cluster0.xxx.mongodb.net/MediConnect?retryWrites=true&w=majority
 JWT_SECRET=your_super_secret_jwt_key_here_make_it_long
 NODE_ENV=production
 FRONTEND_URL=https://your-frontend-domain.com
@@ -100,7 +100,7 @@ git push origin main
 2. Sign up with GitHub
 3. Click "New Web Service"
 4. Connect your GitHub repository
-5. **Name**: docspot-api
+5. **Name**: MediConnect-api
 6. **Environment**: Node
 7. **Build Command**: `npm install`
 8. **Start Command**: `npm start`
@@ -115,7 +115,7 @@ On Render dashboard:
    - `MONGO_URI`: (from MongoDB Atlas)
    - `JWT_SECRET`: (generate long random string)
    - `NODE_ENV`: production
-   - `FRONTEND_URL`: https://your-docspot.vercel.app
+   - `FRONTEND_URL`: https://your-MediConnect.vercel.app
 
 3. Click "Save"
 4. Service will auto-restart
@@ -124,9 +124,9 @@ On Render dashboard:
 
 ```bash
 # Get your Render URL from dashboard
-# It will be something like: https://docspot-api.onrender.com
+# It will be something like: https://MediConnect-api.onrender.com
 
-curl https://docspot-api.onrender.com/api/health
+curl https://MediConnect-api.onrender.com/api/health
 
 # Response:
 # { "status": "ok" }
@@ -157,7 +157,7 @@ cd frontend
 
 # Create .env.production
 cat > .env.production << EOF
-REACT_APP_API_URL=https://docspot-api.onrender.com/api
+REACT_APP_API_URL=https://MediConnect-api.onrender.com/api
 EOF
 
 # In src/utils/api.js, update:
@@ -172,7 +172,7 @@ const api = axios.create({
 2. Import GitHub repository
 3. Select the `frontend` folder as root directory
 4. Add environment variable:
-   - `REACT_APP_API_URL`: https://docspot-api.onrender.com/api
+   - `REACT_APP_API_URL`: https://MediConnect-api.onrender.com/api
 5. Click "Deploy"
 
 #### Step 3: Configure CORS on Backend
@@ -184,7 +184,7 @@ Your backend needs to allow requests from your Vercel domain:
 const corsOptions = {
   origin: [
     'http://localhost:3000',
-    'https://your-docspot.vercel.app'
+    'https://your-MediConnect.vercel.app'
   ],
   credentials: true
 };
@@ -235,7 +235,7 @@ Visit your Vercel URL and test:
 
 ```bash
 # Replace with your Render URL
-BACKEND_URL="https://docspot-api.onrender.com/api"
+BACKEND_URL="https://MediConnect-api.onrender.com/api"
 
 # Health check
 curl $BACKEND_URL/health
@@ -282,10 +282,10 @@ Connect to MongoDB Atlas to verify data:
 
 ```bash
 # Using MongoDB Compass
-# Connection string: mongodb+srv://docspot_admin:PASSWORD@cluster0.xxx.mongodb.net/docspot
+# Connection string: mongodb+srv://MediConnect_admin:PASSWORD@cluster0.xxx.mongodb.net/MediConnect
 
 # Or using mongosh CLI
-mongosh "mongodb+srv://docspot_admin:<PASSWORD>@cluster0.xxx.mongodb.net/docspot"
+mongosh "mongodb+srv://MediConnect_admin:<PASSWORD>@cluster0.xxx.mongodb.net/MediConnect"
 
 # Show collections
 show collections
@@ -344,15 +344,15 @@ Monitor from Dashboard → Metrics
 ```
 PORT=5000
 NODE_ENV=production
-MONGO_URI=mongodb+srv://docspot_admin:PASSWORD@cluster0.xxx.mongodb.net/docspot
+MONGO_URI=mongodb+srv://MediConnect_admin:PASSWORD@cluster0.xxx.mongodb.net/MediConnect
 JWT_SECRET=generate_a_long_random_string_here
-FRONTEND_URL=https://your-docspot.vercel.app
+FRONTEND_URL=https://your-MediConnect.vercel.app
 ```
 
 ### Frontend (.env.production or Platform Variables)
 
 ```
-REACT_APP_API_URL=https://docspot-api.onrender.com/api
+REACT_APP_API_URL=https://MediConnect-api.onrender.com/api
 ```
 
 ---
@@ -362,7 +362,7 @@ REACT_APP_API_URL=https://docspot-api.onrender.com/api
 ### "Can't connect to database"
 - Check MongoDB Atlas IP whitelist includes Render IP
 - Verify connection string has correct password
-- Check MONGO_URI has database name (`/docspot`)
+- Check MONGO_URI has database name (`/MediConnect`)
 
 ### "CORS error in browser"
 - Add your frontend domain to CORS whitelist in backend
@@ -486,4 +486,4 @@ jobs:
 - Verify environment variables
 - Check database connectivity
 
-**Congratulations!** Your DocSpot app is now live in production! 🚀
+**Congratulations!** Your MediConnect app is now live in production! 🚀

@@ -60,7 +60,7 @@ const Register = () => {
           <div className="brand-icon">
             <FaStethoscope />
           </div>
-          <h1>DocSpot</h1>
+          <h1>MediConnect</h1>
           <p className="brand-tagline">Healthcare Made Simple</p>
         </div>
 

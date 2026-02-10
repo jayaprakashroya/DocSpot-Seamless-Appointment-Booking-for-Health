@@ -73,7 +73,7 @@ Cons:
 Steps:
 1. Create gh-pages branch
 2. Update frontend/package.json:
-   "homepage": "https://username.github.io/docspot"
+   "homepage": "https://username.github.io/MediConnect"
 3. Add deploy script to package.json
 4. Push to gh-pages branch
 ```
@@ -225,7 +225,7 @@ Steps:
 1. Go to mongodb.com/cloud/atlas
 2. Create account
 3. Create free cluster
-4. Add database user: docspot_admin
+4. Add database user: MediConnect_admin
 5. Get connection string
 6. Add to backend .env:
    MONGO_URI=mongodb+srv://...
@@ -247,7 +247,7 @@ Cons:
   ❌ Would need to rewrite models
   ❌ Overkill for this project
 
-Note: Not recommended for DocSpot (would need major changes)
+Note: Not recommended for MediConnect (would need major changes)
 ```
 
 #### Option 3: **Render PostgreSQL**
@@ -399,8 +399,8 @@ See: `QUICK_DEPLOYMENT.md`
    apt install -y mongodb-clients
 
 7. Clone your repo:
-   git clone https://github.com/yourusername/docspot.git
-   cd docspot/backend
+   git clone https://github.com/yourusername/MediConnect.git
+   cd MediConnect/backend
 
 8. Create production .env:
    nano .env
@@ -413,7 +413,7 @@ See: `QUICK_DEPLOYMENT.md`
     npm install -g pm2
 
 11. Start app with PM2:
-    pm2 start index.js --name "docspot-backend"
+    pm2 start index.js --name "MediConnect-backend"
     pm2 startup
     pm2 save
 
@@ -443,7 +443,7 @@ See: `QUICK_DEPLOYMENT.md`
 mongodump --out ./data-backup
 
 # 2. Import to cloud
-mongorestore --uri "mongodb+srv://user:pass@cluster.mongodb.net/docspot" ./data-backup
+mongorestore --uri "mongodb+srv://user:pass@cluster.mongodb.net/MediConnect" ./data-backup
 
 # Alternative: Just run seed on cloud DB
 cd backend

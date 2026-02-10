@@ -1,8 +1,8 @@
-# DocSpot Testing & QA Guide
+# MediConnect Testing & QA Guide
 
 ## Overview
 
-This guide covers manual testing workflows, test scenarios, and how to verify that DocSpot works as expected in all user roles.
+This guide covers manual testing workflows, test scenarios, and how to verify that MediConnect works as expected in all user roles.
 
 ---
 
@@ -57,7 +57,7 @@ This guide covers manual testing workflows, test scenarios, and how to verify th
 5. Should see "Application pending approval" message
 
 **Admin Side - Approve:**
-1. Login as admin (`admin@docspot.test` / `adminpass`)
+1. Login as admin (`admin@MediConnect.test` / `adminpass`)
 2. Navigate to `/admin`
 3. View "Pending Doctor Approvals" section
 4. Click "Approve" on doctor card
@@ -658,7 +658,7 @@ SCREENSHOTS:
 
 ## Conclusion
 
-Comprehensive testing ensures DocSpot works reliably across all features and user roles. Follow this guide for:
+Comprehensive testing ensures MediConnect works reliably across all features and user roles. Follow this guide for:
 - Manual testing workflows
 - API endpoint validation
 - Error scenario verification

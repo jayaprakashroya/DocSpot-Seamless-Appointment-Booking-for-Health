@@ -1,8 +1,8 @@
-# 🚀 DEPLOYMENT GUIDE: Taking DocSpot Online
+# 🚀 DEPLOYMENT GUIDE: Taking MediConnect Online
 
 ## Overview
 
-To deploy DocSpot online, you need to deploy 3 components:
+To deploy MediConnect online, you need to deploy 3 components:
 
 ```
 Frontend (React)    → Vercel / Netlify / GitHub Pages
@@ -33,13 +33,13 @@ This creates a `build/` folder ready for hosting.
 1. Go to https://vercel.com
 2. Click "Sign Up" (use GitHub account for easier setup)
 3. Click "Import Project"
-4. Select your GitHub repo containing DocSpot
+4. Select your GitHub repo containing MediConnect
 5. Configure:
    - Framework: React
    - Root Directory: `frontend`
 6. Click "Deploy"
 
-**Done!** Your frontend is live at a Vercel URL (e.g., `docspot-frontend.vercel.app`)
+**Done!** Your frontend is live at a Vercel URL (e.g., `MediConnect-frontend.vercel.app`)
 
 **Option B: Using CLI**
 ```bash
@@ -74,7 +74,7 @@ After deployment, add environment variable in Vercel:
 Create `.env.production` in backend folder:
 ```bash
 PORT=5000
-MONGO_URI=mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@YOUR_CLUSTER.mongodb.net/docspot
+MONGO_URI=mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@YOUR_CLUSTER.mongodb.net/MediConnect
 JWT_SECRET=use_a_very_secure_random_string_here_min_32_chars
 FRONTEND_ORIGIN=https://your-frontend-url.vercel.app
 NODE_ENV=production
@@ -85,13 +85,13 @@ NODE_ENV=production
 1. Go to https://www.mongodb.com/cloud/atlas
 2. Click "Sign Up" → Create account
 3. Create a free cluster:
-   - Cluster Name: `docspot-cluster`
+   - Cluster Name: `MediConnect-cluster`
    - Provider: AWS
    - Region: Choose nearest to you
    - Click "Create"
 4. Wait 5-10 minutes for cluster creation
 5. Create Database User:
-   - Username: `docspot_admin`
+   - Username: `MediConnect_admin`
    - Password: Generate secure password
    - Save these credentials!
 6. Get Connection String:
@@ -100,7 +100,7 @@ NODE_ENV=production
    - Drivers: Node.js
    - Copy connection string
    - Replace `<username>` and `<password>` with your credentials
-   - Replace `docspot` in URI with your database name
+   - Replace `MediConnect` in URI with your database name
    - This becomes your `MONGO_URI` in .env
 
 #### Step 3: Seed Database in Cloud
@@ -122,19 +122,19 @@ npm run seed
 2. Sign up with GitHub
 3. Create new project
 4. Select "Deploy from GitHub repo"
-5. Choose your DocSpot backend repository
+5. Choose your MediConnect backend repository
 6. Configure:
    - Add environment variables from `.env.production`
    - Add all variables: PORT, MONGO_URI, JWT_SECRET, etc.
 7. Click "Deploy"
 
-**Railway will give you a URL like:** `https://docspot-production-xxxx.railway.app`
+**Railway will give you a URL like:** `https://MediConnect-production-xxxx.railway.app`
 
 #### Step 5: Update Frontend Environment Variable
 
 Go back to Vercel and update:
 ```
-REACT_APP_API_URL = https://docspot-production-xxxx.railway.app/api
+REACT_APP_API_URL = https://MediConnect-production-xxxx.railway.app/api
 ```
 
 Vercel will auto-redeploy with new variable.
@@ -158,7 +158,7 @@ Vercel will auto-redeploy with new variable.
    Should load the login page
 
 3. **Test Login:**
-   Use credentials: `liam.murphy@docspot.com` / `awoawmnrqcm`
+   Use credentials: `liam.murphy@MediConnect.com` / `awoawmnrqcm`
    (Database was seeded with these when you ran `npm run seed`)
 
 ✅ **If all three work → Your app is live!**
@@ -217,11 +217,11 @@ Vercel will auto-redeploy with new variable.
 # Visit: https://www.mongodb.com/cloud/atlas
 # - Sign up
 # - Create free cluster (AWS, nearest region)
-# - Create user: docspot_admin / [secure_password]
+# - Create user: MediConnect_admin / [secure_password]
 # - Get connection string
 
 # 2. Save connection string in backend/.env
-MONGO_URI=mongodb+srv://docspot_admin:YOUR_PASSWORD@docspot-cluster.mongodb.net/docspot?retryWrites=true&w=majority
+MONGO_URI=mongodb+srv://MediConnect_admin:YOUR_PASSWORD@MediConnect-cluster.mongodb.net/MediConnect?retryWrites=true&w=majority
 
 # 3. Seed cloud database
 cd backend
@@ -274,7 +274,7 @@ git push origin main
 #   - REACT_APP_API_URL (your Railway backend URL)
 # - Deploy → Done
 
-# Note the Vercel URL (e.g., docspot-frontend.vercel.app)
+# Note the Vercel URL (e.g., MediConnect-frontend.vercel.app)
 ```
 
 #### Phase 4: Final Connections (5 min)
@@ -282,12 +282,12 @@ git push origin main
 ```bash
 # 1. Update Backend FRONTEND_ORIGIN
 # Go to Railway dashboard → Settings → Environment Variables
-# Update: FRONTEND_ORIGIN=https://docspot-frontend.vercel.app
+# Update: FRONTEND_ORIGIN=https://MediConnect-frontend.vercel.app
 
 # 2. Test Everything
-# - Browser: https://docspot-frontend.vercel.app
+# - Browser: https://MediConnect-frontend.vercel.app
 # - Should load login page
-# - Login with: liam.murphy@docspot.com / awoawmnrqcm
+# - Login with: liam.murphy@MediConnect.com / awoawmnrqcm
 # - Should show real-time NavBar data
 # - Success! ✅
 ```
@@ -300,7 +300,7 @@ git push origin main
 
 1. **Buy domain:**
    - GoDaddy, Namecheap, Route53 (~$12/year)
-   - Example: `docspot-app.com`
+   - Example: `MediConnect-app.com`
 
 2. **Frontend Custom Domain (Vercel):**
    - Vercel Dashboard → Settings → Domains
@@ -445,7 +445,7 @@ Before going live, verify:
 ```bash
 # Test login flow
 Visit: https://your-app.vercel.app
-Login: liam.murphy@docspot.com / awoawmnrqcm
+Login: liam.murphy@MediConnect.com / awoawmnrqcm
 
 # Test appointments
 - Book appointment as user
@@ -453,16 +453,16 @@ Login: liam.murphy@docspot.com / awoawmnrqcm
 - Check real-time updates
 
 # Test admin
-Login: sysadmin@docspot.local / SecureAdmin@2024DocSpot
+Login: sysadmin@MediConnect.local / SecureAdmin@2024MediConnect
 Check admin dashboard
 ```
 
 ### 2. Share the URL
 
 ```
-Frontend: https://docspot-frontend.vercel.app
+Frontend: https://MediConnect-frontend.vercel.app
 Backend: https://your-backend-url.railway.app
-Admin: https://docspot-frontend.vercel.app (login with sysadmin credentials)
+Admin: https://MediConnect-frontend.vercel.app (login with sysadmin credentials)
 ```
 
 ### 3. Monitor First Week
@@ -524,4 +524,4 @@ curl https://your-backend-url/api/health
 
 ---
 
-**Now your DocSpot app is available to the world!** 🎉
+**Now your MediConnect app is available to the world!** 🎉

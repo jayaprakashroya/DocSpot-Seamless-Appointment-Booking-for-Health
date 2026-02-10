@@ -96,7 +96,7 @@ const Login = () => {
           <div className="logo-circle">
             <h1>📋</h1>
           </div>
-          <h2>DocSpot</h2>
+          <h2>MediConnect</h2>
           <p className="tagline">Book doctor appointments seamlessly</p>
           
           <div className="features-list">

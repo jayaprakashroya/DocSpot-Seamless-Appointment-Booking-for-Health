@@ -1,4 +1,4 @@
-# DocSpot - Feature Completion & Maturity Checklist
+# MediConnect - Feature Completion & Maturity Checklist
 
 ## ✅ PRODUCTION-READY FEATURES (All Implemented)
 
@@ -214,7 +214,7 @@ backend/
 **.env File Structure**:
 ```
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/docspot
+MONGO_URI=mongodb://localhost:27017/MediConnect
 JWT_SECRET=your_secret_key_here
 NODE_ENV=development
 FRONTEND_URL=http://localhost:3000
@@ -297,9 +297,9 @@ Example:
 
 ---
 
-## 📊 FEATURE COMPARISON (DocSpot vs Industry Standard)
+## 📊 FEATURE COMPARISON (MediConnect vs Industry Standard)
 
-| Feature | DocSpot | Industry Standard |
+| Feature | MediConnect | Industry Standard |
 |---------|---------|-------------------|
 | Role-based access | ✅ 100% | ✅ Required |
 | Appointment lifecycle | ✅ 100% | ✅ Required |
@@ -318,11 +318,11 @@ Example:
 
 ## 🎯 INTERVIEW TALKING POINTS
 
-### "What makes DocSpot production-ready?"
+### "What makes MediConnect production-ready?"
 
 **Answer**:
 
-"DocSpot implements core healthcare app features correctly:
+"MediConnect implements core healthcare app features correctly:
 
 1. **Role-based access** - Admin/Doctor/User with backend protection
 2. **Appointment validation** - Prevents double booking, validates working hours
@@ -376,7 +376,7 @@ Unlike hobby projects, we focused on reliability over features."
 
 ## 📝 SUMMARY
 
-DocSpot demonstrates **mature, professional engineering**:
+MediConnect demonstrates **mature, professional engineering**:
 
 ✅ **Features**: All core healthcare app features implemented
 ✅ **Architecture**: Clean, maintainable, industry-standard

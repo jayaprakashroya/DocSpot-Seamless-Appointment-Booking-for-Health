@@ -20,19 +20,19 @@
 # 4. Wait 5-10 minutes...
 
 # 5. Create Database User:
-Username: docspot_admin
+Username: MediConnect_admin
 Password: [Generate strong password - SAVE IT!]
 
 # 6. Get Connection String:
 # Click "Connect" → "Connect your application"
 # Copy full connection string
 # Should look like:
-# mongodb+srv://docspot_admin:PASSWORD@docspot-cluster-xxxx.mongodb.net/docspot?retryWrites=true&w=majority
+# mongodb+srv://MediConnect_admin:PASSWORD@MediConnect-cluster-xxxx.mongodb.net/MediConnect?retryWrites=true&w=majority
 ```
 
 **Save this:** 
 ```
-MONGO_URI=mongodb+srv://docspot_admin:YOUR_PASSWORD@YOUR_CLUSTER.mongodb.net/docspot?retryWrites=true&w=majority
+MONGO_URI=mongodb+srv://MediConnect_admin:YOUR_PASSWORD@YOUR_CLUSTER.mongodb.net/MediConnect?retryWrites=true&w=majority
 ```
 
 ---
@@ -67,7 +67,7 @@ npm run seed
 1. Go to https://railway.app
 2. Click "Start New Project"
 3. Select "Deploy from GitHub repo"
-4. Choose your DocSpot repository
+4. Choose your MediConnect repository
 5. Wait for build...
 6. Go to project → Settings
 7. Add environment variables:
@@ -79,7 +79,7 @@ npm run seed
 
 **Save the URL Railway gives you:**
 ```
-https://docspot-production-xxxx.railway.app
+https://MediConnect-production-xxxx.railway.app
 ```
 
 ---
@@ -90,11 +90,11 @@ https://docspot-production-xxxx.railway.app
 
 1. Go to https://vercel.com
 2. Click "Import Project"
-3. Choose your DocSpot GitHub repo
+3. Choose your MediConnect GitHub repo
 4. Root Directory: `frontend`
 5. Click "Environment Variables"
 6. Add:
-   - `REACT_APP_API_URL` = `https://docspot-production-xxxx.railway.app/api`
+   - `REACT_APP_API_URL` = `https://MediConnect-production-xxxx.railway.app/api`
    - (Use your Railway URL from step 3)
 7. Click "Deploy"
 
@@ -102,7 +102,7 @@ https://docspot-production-xxxx.railway.app
 
 **Your app URL will be:**
 ```
-https://docspot-xxxx.vercel.app
+https://MediConnect-xxxx.vercel.app
 ```
 
 ---
@@ -110,7 +110,7 @@ https://docspot-xxxx.vercel.app
 ## STEP 5: Connect Everything (2 min)
 
 Go back to Railway and update:
-- `FRONTEND_ORIGIN` = `https://docspot-xxxx.vercel.app`
+- `FRONTEND_ORIGIN` = `https://MediConnect-xxxx.vercel.app`
 
 **That's it! Everything is connected!**
 
@@ -132,7 +132,7 @@ Should show: Login page
 
 ### Test Login
 ```
-Email: liam.murphy@docspot.com
+Email: liam.murphy@MediConnect.com
 Password: awoawmnrqcm
 Click Login
 ```
@@ -198,7 +198,7 @@ Want `myapp.com` instead of `vercel-random-name.com`?
 
 ### Weekly Checks
 1. Visit your app at: `https://your-vercel-url.vercel.app`
-2. Try login: `liam.murphy@docspot.com`
+2. Try login: `liam.murphy@MediConnect.com`
 3. Works? You're good! ✅
 
 ### View Logs
@@ -256,6 +256,6 @@ npm run seed
 
 ---
 
-**Your DocSpot app is now online! 🚀**
+**Your MediConnect app is now online! 🚀**
 
 For detailed help, see: `DEPLOYMENT_GUIDE_ONLINE.md`

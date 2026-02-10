@@ -9,7 +9,7 @@ const path = require('path');
 const backendDir = path.join(__dirname, 'backend');
 const frontendDir = path.join(__dirname, 'frontend');
 
-console.log('Starting DocSpot in development mode...\n');
+console.log('Starting MediConnect in development mode...\n');
 
 // Start backend
 const backend = spawn('npm', ['run', 'dev'], { cwd: backendDir, stdio: 'inherit' });
